@@ -9,6 +9,10 @@ Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 
 
 int main(void){
     
+    int valor;
+
+    printf("Digite o valor do saque: R$\n");
+    scanf("%i", valor);
 
 
     return 0;
