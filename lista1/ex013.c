@@ -22,7 +22,7 @@ int main(void){
 	
 	area = largura * altura;
 	consumo = area * 3;
-	latas = consumo / 3,6;
+	latas = consumo / 3.6;
 	
 	printf("A quantidade necessaria de latas de tinta e %0.2f\n", latas);
 	
