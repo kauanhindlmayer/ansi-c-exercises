@@ -12,7 +12,14 @@ int main(void){
     int valor;
 
     printf("Digite o valor do saque: R$\n");
-    scanf("%i", valor);
+    scanf("%i", &valor);
+    fflush(stdin);
+
+    valor = valor % 100 
+
+    if (valor < 9 || valor > 600) {
+        printf("Valor Invalido!");
+    } 
 
 
     return 0;
