@@ -27,9 +27,10 @@
 #include <stdlib.h>
 
 int main(void){
+
+    int conversor, valor;
     
     printf("-------------------MENU-------------------\n");
-    printf("Escolha umas das seguintes conversões:\n");
     printf("[1] - Metros para centimetros\n");
     printf("[2] - Centimetros para metros\n");
     printf("[3] - Dias para horas\n");
@@ -42,14 +43,69 @@ int main(void){
     printf("[10] - Arroba para Kg\n");
     printf("[11] - Polegada para cm\n");
     printf("[12] - Cm para polegada\n");
-    printf("[13] - Palmo para centímetros\n");
-    printf("[14] - Centímetros para palmos\n");
-    printf("[15] - Pé para centímetros\n");
-    printf("[16] - Cm para pé\n");
+    printf("[13] - Palmo para centimetros\n");
+    printf("[14] - Centimetros para palmos\n");
+    printf("[15] - Pé para centimetros\n");
+    printf("[16] - Cm para pe\n");
     printf("[17] - Nó para km/h\n");
-    printf("[18] - Km/h para nós\n");
-    printf("[19] - Côvado para cm\n");
-    printf("[20] - Cm para côvado\n");
+    printf("[18] - Km/h para nos\n");
+    printf("[19] - Covado para cm\n");
+    printf("[20] - Cm para covado\n");
+    printf("------------------------------------------\n");
+    printf("Escolha umas das conversoes acima:\n");
+    scanf("%i", &conversor);
+    fflush(stdin);
+
+    if (conversor == 1) {
+        printf("Digite uma valor em metros: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        int MetrosParaCentimetros = valor * 100;
+
+        printf("%im em centimetros equivale a %icm\n", valor, MetrosParaCentimetros);
+    } else if (conversor == 2) {
+        printf("Digite uma valor em centimetros: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        int CentimetrosParaMetros = valor / 100;;
+
+        printf("%icm em metros equivale a %im.\n", valor, CentimetrosParaMetros);
+
+    } else if (conversor == 3) {
+        printf("Digite uma valor em dias: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        int DiasParaHoras = valor * 24;
+
+        printf("%i dias equivale a %i horas.\n", valor, DiasParaHoras);
+    } else if (conversor == 4) {
+        printf("Digite uma valor em horas: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        float HorasParaDias = valor / 24;
+
+        printf("%i horas equivale a %.1f dias.\n", valor, HorasParaDias);
+    } else if (conversor == 5) {
+        printf("Digite uma valor em Km/h: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        float kmParaMilhas = valor * 1.684;
+
+        printf("%i Km/h equivale a %.1f milhas.\n", valor, kmParaMilhas);
+    } else if (conversor == 6) {
+        printf("Digite uma valor em milhas: \n");
+        scanf("%i", &valor);
+        fflush(stdin);
+
+        float MilhasParaKm = valor / 1.684;
+
+        printf("%i milhas equivale a %.1f Km/h.\n", valor, MilhasParaKm);
+    }
 
     
 
