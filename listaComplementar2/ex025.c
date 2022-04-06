@@ -28,6 +28,30 @@
 
 int main(void){
     
+    printf("-------------------MENU-------------------\n");
+    printf("Escolha umas das seguintes conversões:\n");
+    printf("[1] - Metros para centimetros\n");
+    printf("[2] - Centimetros para metros\n");
+    printf("[3] - Dias para horas\n");
+    printf("[4] - Horas para dias\n");
+    printf("[5] - Km/h para milhas/h\n");
+    printf("[6] - Milhas/h para Km/h\n");
+    printf("[7] - Celsius para Fahrenheit\n");
+    printf("[8] - Farenheit para Celsius\n");
+    printf("[9] - Kg para arroba\n");
+    printf("[10] - Arroba para Kg\n");
+    printf("[11] - Polegada para cm\n");
+    printf("[12] - Cm para polegada\n");
+    printf("[13] - Palmo para centímetros\n");
+    printf("[14] - Centímetros para palmos\n");
+    printf("[15] - Pé para centímetros\n");
+    printf("[16] - Cm para pé\n");
+    printf("[17] - Nó para km/h\n");
+    printf("[18] - Km/h para nós\n");
+    printf("[19] - Côvado para cm\n");
+    printf("[20] - Cm para côvado\n");
+
+    
 
 
     return 0;

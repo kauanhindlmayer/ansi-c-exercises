@@ -9,18 +9,34 @@ Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 
 
 int main(void){
     
-    int valor;
+    int valor, nota100, nota50, nota10, nota5, moeda1, aux;
 
     printf("Digite o valor do saque: R$\n");
     scanf("%i", &valor);
     fflush(stdin);
 
-    valor = valor % 100 
-
     if (valor < 9 || valor > 600) {
-        printf("Valor Invalido!");
+        printf("Valor Invalido!\n");
+        return 0;
     } 
 
+    aux = valor;
+
+    nota100 = valor / 100;
+    valor %= 100;
+
+    nota50 = valor / 50;
+    valor %= 50;
+
+    nota10 = valor / 10;
+    valor %= 10;
+
+    nota5 = valor / 5;
+    valor %= 5;
+
+    moeda1 = valor / 1;
+
+    printf("Para sacar a quantia de %i:\nNotas de R$100: %i\nNotas de R$50: %i\nNotas de R$10: %i\nNotas de R$5: %i\nMoedas de R$1: %i\n", aux, nota100, nota50, nota10, nota5, moeda1);
 
     return 0;
 }
