@@ -8,18 +8,16 @@ ano e em seguida informe se este ano é ou não bissexto
 
 int main(void){
 
-    int ano, resultado;
+    int ano;
 
     printf("Digite um numero correspondente a um determinado ano: \n");
     scanf("%i", &ano);
     fflush(stdin);
 
-    resultado = ano % 4;
-
-    if (resultado == 0) {
-        printf("\nE um ano bissexto!\n");
+    if ((ano % 4 == 0 && ano % 100 != 0 ) || ano % 400 == 0) {
+        printf("\nO ano e bissexto (tem 366 dias).\n");
     } else {
-        printf("\nNao e um ano bissexto!\n");
+        printf("\nO ano NAO e bissexto (tem 365 dias).\n");
     }
 
     return 0;

@@ -22,7 +22,6 @@
     20-cm para côvado
 */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,9 +45,9 @@ int main(void){
     printf("[12] - Cm para polegada\n");
     printf("[13] - Palmo para centimetros\n");
     printf("[14] - Centimetros para palmos\n");
-    printf("[15] - Pé para centimetros\n");
+    printf("[15] - Pe para centimetros\n");
     printf("[16] - Cm para pe\n");
-    printf("[17] - Nó para km/h\n");
+    printf("[17] - No para km/h\n");
     printf("[18] - Km/h para nos\n");
     printf("[19] - Covado para cm\n");
     printf("[20] - Cm para covado\n");
@@ -165,10 +164,79 @@ int main(void){
 
         printf("------------------------------------------\n");
         printf("%.1f cm equivalem a %.1f Polegadas.\n", valor, CentimetrosParaPolegadas);
+    } else if (conversor == 13) {
+        printf("Digite um valor em Palmos: \n");
+        scanf("%f", &valor);
+        fflush(stdin); 
+
+        float PalmosParaCentimetros = valor * 22.86;
+
+        printf("------------------------------------------\n");
+        printf("%.1f palmos equivalem a %.1f centimetros.\n", valor, PalmosParaCentimetros);
+    } else if (conversor == 14) {
+        printf("Digite um valor em Centimetros: \n");
+        scanf("%f", &valor);
+        fflush(stdin); 
+
+        float CentimetrosParaPalmos = valor / 22.86;
+
+        printf("------------------------------------------\n");
+        printf("%.1f centimetros equivalem a %.1f palmos.\n", valor, CentimetrosParaPalmos);
+    } else if (conversor == 15) {
+        printf("Digite um valor em Pes: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float PesParaCentimetros = valor * 30.48;
+
+        printf("------------------------------------------\n");
+        printf("%.1f pes equivalem a %.1f centimetros.\n", valor, PesParaCentimetros);
+    } else if (conversor == 16) {
+        printf("Digite um valor em Centimetros: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float CentimetrosParaPes = valor / 30.48;
+
+        printf("------------------------------------------\n");
+        printf("%.1f centimetros equivalem a %.1f pes.\n", valor, CentimetrosParaPes);
+    } else if (conversor == 17) {
+        printf("Digite um valor em Nos/h: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float nosParaKm = valor * 1.854;
+
+        printf("------------------------------------------\n");
+        printf("%.1f nos/h equivalem a %.1f Km/h.\n", valor, nosParaKm);
+    } else if (conversor == 18) {
+        printf("Digite um valor em Km/h: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float KmParaNos = valor / 1.854;
+
+        printf("------------------------------------------\n");
+        printf("%.1f Km/h equivalem a %.1f Nos/h.\n", valor, KmParaNos);
+    } else if (conversor == 19) {
+        printf("Digite um valor em Covado: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float CovadoParaCentimetros = valor * 66;
+
+        printf("------------------------------------------\n");
+        printf("%.1f covados equivalem a %.1f centimetros.\n", valor, CovadoParaCentimetros);
+    } else if (conversor == 20) {
+        printf("Digite um valor em Centimetros: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float CentimetrosParaCovados = valor / 66;
+
+        printf("------------------------------------------\n");
+        printf("%.1f centimetros equivalem a %.1f covados.\n", valor, CentimetrosParaCovados);
     }
-
-    
-
 
     return 0;
 }

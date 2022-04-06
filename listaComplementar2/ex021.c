@@ -42,7 +42,7 @@ int main(void){
         printf("O diagnostico e Pneumonia.\n");
     } else if (somaDosSintomas == 1) {
         printf("O diagnostico e Resfriado.\n");
-    } else if (somaDosSintomas >= 2 &&  somaDosSintomas != temperatura && infeccao) {
+    } else if (somaDosSintomas >= 2 && !(temperatura && infeccao)) {
         printf("O diagnostico e gripe.\n");
     }
     
