@@ -28,7 +28,8 @@
 
 int main(void){
 
-    int conversor, valor;
+    int conversor;
+    float valor;
     
     printf("-------------------MENU-------------------\n");
     printf("[1] - Metros para centimetros\n");
@@ -57,54 +58,87 @@ int main(void){
     fflush(stdin);
 
     if (conversor == 1) {
-        printf("Digite uma valor em metros: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em metros: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
-        int MetrosParaCentimetros = valor * 100;
+        float MetrosParaCentimetros = valor * 100;
 
-        printf("%im em centimetros equivale a %icm\n", valor, MetrosParaCentimetros);
+        printf("%.1fm em centimetros equivale a %.1fcm\n", valor, MetrosParaCentimetros);
     } else if (conversor == 2) {
-        printf("Digite uma valor em centimetros: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em centimetros: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
-        int CentimetrosParaMetros = valor / 100;;
+        float CentimetrosParaMetros = valor / 100;;
 
-        printf("%icm em metros equivale a %im.\n", valor, CentimetrosParaMetros);
+        printf("%.1fcm em metros equivale a %.1fm.\n", valor, CentimetrosParaMetros);
 
     } else if (conversor == 3) {
-        printf("Digite uma valor em dias: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em dias: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
-        int DiasParaHoras = valor * 24;
+        float DiasParaHoras = valor * 24;
 
-        printf("%i dias equivale a %i horas.\n", valor, DiasParaHoras);
+        printf("%.1f dias equivale a %.1f horas.\n", valor, DiasParaHoras);
     } else if (conversor == 4) {
-        printf("Digite uma valor em horas: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em horas: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
         float HorasParaDias = valor / 24;
 
-        printf("%i horas equivale a %.1f dias.\n", valor, HorasParaDias);
+        printf("%.1f horas equivale a %.1f dias.\n", valor, HorasParaDias);
     } else if (conversor == 5) {
-        printf("Digite uma valor em Km/h: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em Km/h: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
         float kmParaMilhas = valor * 1.684;
 
-        printf("%i Km/h equivale a %.1f milhas.\n", valor, kmParaMilhas);
+        printf("%.1f Km/h equivale a %.1f milhas/h.\n", valor, kmParaMilhas);
     } else if (conversor == 6) {
-        printf("Digite uma valor em milhas: \n");
-        scanf("%i", &valor);
+        printf("Digite um valor em Milhas/h: \n");
+        scanf("%f", &valor);
         fflush(stdin);
 
         float MilhasParaKm = valor / 1.684;
 
-        printf("%i milhas equivale a %.1f Km/h.\n", valor, MilhasParaKm);
+        printf("%.1f milhas/h equivale a %.1f Km/h.\n", valor, MilhasParaKm);
+    } else if (conversor == 7) {
+        printf("Digite um valor em Celsius: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float CelsiusParaFahrenheit = valor * 1.8 + 32;
+
+        printf("%.1f graus celsius equivale a %.1f graus fahrenheit.\n", valor, CelsiusParaFahrenheit);
+    } else if (conversor == 8) {
+        printf("Digite um valor em Fahrenheit: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float FahrenheitParaCelsius = (valor - 32) / 1.8;
+
+        printf("%.1f graus fahrenheit equivale a %.1f graus celsius.\n", valor, FahrenheitParaCelsius);
+    } else if (conversor == 9) {
+        printf("Digite um valor em quilogramas: \n");
+        scanf("%f", &valor);
+        fflush(stdin); 
+
+        float KgParaArroba = valor / 15;
+
+        printf("%.1f Kg equivale a %.1f @.\n", valor, KgParaArroba);
+    } else if (conversor == 10) {
+        printf("Digite um valor em Arrobas: \n");
+        scanf("%f", &valor);
+        fflush(stdin);
+
+        float ArrobasParaKg = valor * 15;
+
+        printf("------------------------------------------\n");
+        printf("%.1f @ equivale a %.1f Kg.\n", valor, ArrobasParaKg);
     }
 
     
