@@ -12,7 +12,7 @@ Se for herbívoro: O animal é o CAVALO
 #include <stdlib.h>
 
 int main(void){
-    int classe, opcaoMamifero, opcaoAve, opcaoReptil, opcao3;
+    int classe, opcaoMamifero, opcaoAve, opcaoReptil, opcaoBipede, opcaoQuadrupede, opcaoNaoVoador;
 
     printf("Escolha um dos seguintes animais:\nleao, cavalo, homem, macaco, morcego, baleia, avestruz, pinguim, pato, aguia, tartaruga, crocodilo e cobra.\n");
     printf("------------------------------------------------------------------------------------------------\n");
@@ -44,21 +44,45 @@ int main(void){
         scanf("%i", &opcaoBipede);
         fflush(stdin);
     } else if (opcaoMamifero == 3) {
-        printf("O animal é o MORCEGO!");
+        printf("O animal e o MORCEGO!\n");
     } else if (opcaoMamifero == 4) {
-        printf("O animal é a BALEIA!");
+        printf("O animal e a BALEIA!\n");
     }
     
     if (opcaoQuadrupede == 1) {
-        printf("O animal é o LEAO!");
+        printf("O animal e o LEAO!\n");
     } else if (opcaoQuadrupede == 2) {
-        printf("O animal é o CAVALO!");
+        printf("O animal e o CAVALO!\n");
     }
 
     if (opcaoBipede == 1) {
-        printf("O animal é o HOMEM!");
+        printf("O animal e o HOMEM!\n");
     } else if (opcaoBipede == 2) {
-        printf("O animal é o MACACO!");
+        printf("O animal e o MACACO!\n");
+    }
+
+    if (opcaoAve == 1) {
+        printf("O animal e a AGUIA!\n");
+    } else if (opcaoAve == 2) {
+        printf("O animal e o PATO!\n");
+    } else if (opcaoAve == 3) {
+        printf("A ave e:\n[1] - Polar\n[2] - Tropical\n");
+        scanf("%i", &opcaoNaoVoador);
+        fflush(stdin);
+    }
+
+    if (opcaoNaoVoador == 1) {
+        printf("O animal e PINGUIM!\n");
+    } else if (opcaoNaoVoador == 2) {
+        printf("O animal e o AVESTRUZ!\n");
+    }
+
+    if (opcaoReptil == 1) {
+        printf("O animal e o CROCODILO!\n");
+    } else if (opcaoReptil == 2) {
+        printf("O animal e a TARTARUGA!\n");
+    } else if (opcaoReptil == 3) {
+        printf("O animal e a COBRA!\n");
     }
 
     return 0;
