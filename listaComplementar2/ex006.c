@@ -13,7 +13,12 @@ int main(void){
     scanf("%c", &sexo);
     fflush(stdin);
 
-    sexo == 'M' || sexo == 'm' ? printf("Masculino") : printf("Feminino");
+    if (sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f') {
+        printf("Valor invalido!\n");
+    } else {
+        sexo == 'M' || sexo == 'm' ? printf("Masculino\n") : printf("Feminino\n");
+    }
+
 
     return 0;
 }
