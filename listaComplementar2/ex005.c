@@ -12,7 +12,7 @@ int main(void){
     scanf("%f", &num1);
     fflush(stdin);
 
-    num1 == (int)num1 ? printf("Inteiro"): printf("Quebrado");    
+    num1 == (int)num1 ? printf("Inteiro\n") : printf("Quebrado\n");    
 
     return 0;
 }

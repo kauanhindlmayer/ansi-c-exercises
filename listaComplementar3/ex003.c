@@ -7,23 +7,29 @@ o maior e o menor número do conjunto.
 #include <stdlib.h>
 
 int main(void){
-    
-    int num1, num2, num3, num4, num5, num6, num7, num8, num9, num10;
-
-    printf("Digite dez numeros inteiros:\n");
-    scanf("%i %i %i %i %i %i %i %i %i %i", &num1, &num2, &num3, &num4, &num5, &num6, &num7, &num8, &num9, &num10);
-    fflush(stdin);
-
-    int c,maior = num1;
-
-    for (c = 1; c <= 10; c++) {
-        if (num1 + c > maior) {
-            maior = num2 + c;
-        }
-    }
-
-    printf("%i", maior);
-    
 	
-	return 0;
+	int num, maior, menor;
+
+	printf("Digite um numero: \n");
+	scanf("%i", &num);
+	fflush(stdin);
+
+	maior = num;
+	menor = num;
+
+	for (int i = 1; i <= 10; i++) {
+			printf("Digite um numero: \n");
+			scanf("%i", &num);
+			fflush(stdin);
+
+			if (num > maior) {
+				maior = num;
+			} else if (num < menor) {
+				menor = num;
+			}
+	}
+
+	printf("A diferença entre os numeros equvale a %i\n", maior - menor);
+	
+return 0;
 }
