@@ -1,6 +1,6 @@
 /*
-Faça um programa que mostre a soma desta serie S= 1/1 + 2/3 + 3/5+ 
-4/7+5/9+..+10/19.
+Faça um programa que mostre a soma desta serie S = (37*38)/1 + (36*37)/2 + 
+(35*36)/3 + ... + (1*2)/37.
 */
 
 #include <stdio.h>
@@ -8,14 +8,15 @@ Faça um programa que mostre a soma desta serie S= 1/1 + 2/3 + 3/5+
 
 int main(void){ 
 
-  float denominador = 1, soma = 0;
+  float soma = 0, num1 = 37, num2 = 38;
 
   printf("------------------------------\n");
-  
-  for (int i = 1; i <= 10; i++) {
-    soma += (i / denominador);
+
+  for (int i = 1; i <= 37; i++) {
+    soma += (num1 * num2 / i);
     printf("%0.1f\n", soma); 
-    denominador += 2;
+    num1--;
+    num2--;
   }
 
   printf("------------------------------\nA soma equivale a %.1f\n", soma);
