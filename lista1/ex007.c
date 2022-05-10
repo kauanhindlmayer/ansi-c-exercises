@@ -1,7 +1,5 @@
-/* Construa um programa que converta metros para centímetros. 
-
-R.: 
-
+/* 
+	Construa um programa que converta metros para centímetros. 
 */
 
 #include <stdio.h>

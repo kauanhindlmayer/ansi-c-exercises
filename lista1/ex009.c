@@ -1,7 +1,5 @@
 /*
-Construa um programa que pe�a as 4 notas bimestrais e mostre a m�dia. 
-
-R.: 
+	Construa um programa que pe�a as 4 notas bimestrais e mostre a m�dia. 
 */
 
 #include <stdio.h>

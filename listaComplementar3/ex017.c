@@ -25,7 +25,7 @@ int main(void){
 int calcFatorial() {
   int num1, total = 1;
 
-  printf("Digite um numero:\n");
+  printf("Digite um numero: ");
   scanf("%i", &num1);
   fflush(stdin);
 

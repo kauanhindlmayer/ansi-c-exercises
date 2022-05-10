@@ -15,17 +15,15 @@ int main(void){
 void verificaPrimo() {
   int verificador = 0, numero;
 
-  printf("Digite um numero:\n");
+  printf("Digite um numero: ");
   scanf("%i", &numero);
   fflush(stdin);
 
-  for(int i = 2; i < numero; i++) {
+  for(int i = 2; i < numero / 2; i++) {
     if(numero % i == 0) {
-      verificador = 0;
-    } else {
-      verificador = 1;
+      verificador++;
     }
-  }
 
-  return (verificador == 1) ? printf("O numero %i e PRIMO!\n", numero) : printf("O numero %i NAO e primo!\n", numero);
+    return (verificador == 0) ? printf("O numero %d e primo!\n", numero) : printf("O numero %d nao e primo!\n", numero);
+  }
 }

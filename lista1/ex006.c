@@ -1,6 +1,5 @@
-/* Construa um programa que calcule a �rea de um c�rculo. 
-
-R.: 
+/* 
+	Construa um programa que calcule a �rea de um c�rculo. 
 */
 
 #include <stdio.h>

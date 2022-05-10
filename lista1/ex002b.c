@@ -1,4 +1,3 @@
-	// Início do programa
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,6 +8,7 @@ int main(void){
 	printf("Digite o ano atual: ");
 	scanf("%i", &ano_atual);
 	fflush(stdin);
+
 	printf("Digite o seu ano de nascimento: ");
 	scanf("%i", &ano_nasc);	
 	fflush(stdin);

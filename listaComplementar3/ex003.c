@@ -17,7 +17,7 @@ int main(void){
 	maior = num;
 	menor = num;
 
-	for (int i = 1; i <= 10; i++) {
+	for (int i = 1; i < 10; i++) {
 			printf("Digite um numero: \n");
 			scanf("%i", &num);
 			fflush(stdin);
