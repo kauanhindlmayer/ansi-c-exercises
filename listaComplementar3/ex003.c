@@ -1,6 +1,6 @@
 /*
-Faça um programa que leia dez números inteiros e calcule a diferença entre 
-o maior e o menor número do conjunto.
+	Faça um programa que leia dez números inteiros e calcule a diferença entre 
+	o maior e o menor número do conjunto.
 */
 
 #include <stdio.h>

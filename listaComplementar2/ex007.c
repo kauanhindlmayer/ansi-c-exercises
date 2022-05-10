@@ -1,5 +1,5 @@
 /*
-7.	Faça um programa que verifique se uma letra digitada é vogal ou consoante.
+    Faça um programa que verifique se uma letra digitada é vogal ou consoante.
 */
 
 #include <stdio.h>

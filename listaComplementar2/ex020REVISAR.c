@@ -1,8 +1,8 @@
 /*
-20. Faça um programa que peça uma data no formato dd/mm/aaaa e 
-determine se a mesma é uma data válida. Consistências: 
-Ano maior que zero. Mês entre 1 e 12. Meses com 30 e 31 dias. 
-Mês com 28 ou 29 dias.
+    Faça um programa que peça uma data no formato dd/mm/aaaa e 
+    determine se a mesma é uma data válida. Consistências: 
+    Ano maior que zero. Mês entre 1 e 12. Meses com 30 e 31 dias. 
+    Mês com 28 ou 29 dias.
 */
 
 #include <stdio.h>

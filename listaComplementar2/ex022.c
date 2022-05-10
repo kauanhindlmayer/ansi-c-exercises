@@ -1,11 +1,11 @@
 /*
-    22. Faça um programa que seja capaz de concluir qual dentre os animais seguintes foi escolhido, através de perguntas e respostas. Animais possíveis: leão, cavalo, homem, macaco, morcego, baleia, avestruz, pingüim, pato, águia, tartaruga, crocodilo e cobra. 
-Apresente as opções numeradas de acordo com a coluna.
-Exemplo: 	
-Opções: 1-Mamíferos, 2-Aves e 3-Répteis
-Se for mamífero, apresente as outras opções: 1-Quadrúpede, 2-Bípede, 3-Voadores e 4-Aquáticos
-Se for quadrúpede, apresente as opções possíveis: 1-Carnívoro e 2-Herbívoro
-Se for herbívoro: O animal é o CAVALO
+    Faça um programa que seja capaz de concluir qual dentre os animais seguintes foi escolhido, através de perguntas e respostas. Animais possíveis: leão, cavalo, homem, macaco, morcego, baleia, avestruz, pingüim, pato, águia, tartaruga, crocodilo e cobra. 
+    Apresente as opções numeradas de acordo com a coluna.
+    Exemplo: 	
+    Opções: 1-Mamíferos, 2-Aves e 3-Répteis
+    Se for mamífero, apresente as outras opções: 1-Quadrúpede, 2-Bípede, 3-Voadores e 4-Aquáticos
+    Se for quadrúpede, apresente as opções possíveis: 1-Carnívoro e 2-Herbívoro
+    Se for herbívoro: O animal é o CAVALO
 */
 
 #include <stdio.h>

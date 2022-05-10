@@ -1,11 +1,11 @@
 /*
-12. Faça um programa onde o usuário possa escolher em um menu as seguintes opções de cálculo:
-    a. Área Retângulo = base * altura
-    b. Área Triângulo = base * altura/2
-    c. Área do Círculo = pi * r * r
-    d. Área do quadrado = lado * lado
-    e. Área do trapézio = (lmaior + lmenor) * altura/2
-    f. Sair
+    Faça um programa onde o usuário possa escolher em um menu as seguintes opções de cálculo:
+        a. Área Retângulo = base * altura
+        b. Área Triângulo = base * altura/2
+        c. Área do Círculo = pi * r * r
+        d. Área do quadrado = lado * lado
+        e. Área do trapézio = (lmaior + lmenor) * altura/2
+        f. Sair
 */
 
 #include <stdio.h>

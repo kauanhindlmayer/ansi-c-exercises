@@ -1,5 +1,5 @@
 /*
-8.	Faça um programa que leia 3 valores inteiros e exiba-os em ordem crescente. 
+    Faça um programa que leia 3 valores inteiros e exiba-os em ordem crescente. 
 */
 
 #include <stdio.h>

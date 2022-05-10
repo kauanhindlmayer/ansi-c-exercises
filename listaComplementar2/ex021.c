@@ -1,14 +1,14 @@
 /*
-21. Faça um programa que gere o diagnostico para algumas doenças. 
-Para isso e necessário fazer uma entrevista com o usuário, perguntando 
-a ele se tem determinados sintomas:
-    a. Infecção nos pulmões ( 0 - não 1 - sim)
-    b. Temperatura (0 - normal 1 - anormal)
-    c. Coriza (0 - não 1 - sim)
-    d. Espirros (0 - não 1 - sim)
-    e. Se o paciente tiver infecção nos pulmões e temperatura anormal o diagnostico é Pneumonia.
-    f. Se o paciente tiver apenas um sintoma (qualquer) é resfriado.
-    g. Se o paciente tiver dois ou mais sintomas que não sejam infecção nos pulmões e temperatura anormal simultaneamente, o diagnóstico é gripe.
+    Faça um programa que gere o diagnostico para algumas doenças. 
+    Para isso e necessário fazer uma entrevista com o usuário, perguntando 
+    a ele se tem determinados sintomas:
+        a. Infecção nos pulmões ( 0 - não 1 - sim)
+        b. Temperatura (0 - normal 1 - anormal)
+        c. Coriza (0 - não 1 - sim)
+        d. Espirros (0 - não 1 - sim)
+        e. Se o paciente tiver infecção nos pulmões e temperatura anormal o diagnostico é Pneumonia.
+        f. Se o paciente tiver apenas um sintoma (qualquer) é resfriado.
+        g. Se o paciente tiver dois ou mais sintomas que não sejam infecção nos pulmões e temperatura anormal simultaneamente, o diagnóstico é gripe.
 
 */
 

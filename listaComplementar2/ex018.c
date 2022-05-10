@@ -1,8 +1,8 @@
 /*
-Faça um programa que calcule uma equação do 2o. grau, na forma x2+bx+c.
-O programa deve fazer todas as consistências de dados e informar caso 
-o usuário entre com dados errados. Deve ainda informar se o delta é 
-positivo ou negativo, e os valores de X quando existirem.
+    Faça um programa que calcule uma equação do 2o. grau, na forma x2+bx+c.
+    O programa deve fazer todas as consistências de dados e informar caso 
+    o usuário entre com dados errados. Deve ainda informar se o delta é 
+    positivo ou negativo, e os valores de X quando existirem.
 */
 
 #include <stdio.h>

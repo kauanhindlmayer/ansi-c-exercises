@@ -1,5 +1,5 @@
 /*
-1-	Construa um algoritmo que mostre a mensagem "Olá, Mundo!" na tela. 
+	Construa um algoritmo que mostre a mensagem "Olá, Mundo!" na tela. 
 */
 
 #include <stdio.h>

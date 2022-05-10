@@ -1,5 +1,5 @@
 /*
-3-	Construa um algoritmo que calcule a área de um circulo.
+	Construa um algoritmo que calcule a área de um circulo.
 */
 
 #include <stdio.h>

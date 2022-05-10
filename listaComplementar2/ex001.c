@@ -1,5 +1,5 @@
 /*
-1.	Faça um programa que peça dois números e imprima o maior deles.
+	Faça um programa que peça dois números e imprima o maior deles.
 */
 
 #include <stdio.h>

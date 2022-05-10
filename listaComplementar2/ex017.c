@@ -1,9 +1,9 @@
 /*
-Faça um programa que peça os 3 lados de um triângulo. 
-O programa deverá informar se os valores podem formar um triângulo, 
-ou seja, a soma de dois lados não pode ser menor que o lado restante. 
-Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, 
-isósceles ou escaleno.
+    Faça um programa que peça os 3 lados de um triângulo. 
+    O programa deverá informar se os valores podem formar um triângulo, 
+    ou seja, a soma de dois lados não pode ser menor que o lado restante. 
+    Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, 
+    isósceles ou escaleno.
 */
 
 #include <stdio.h>

@@ -1,5 +1,5 @@
 /*
-4-	Construa um algoritmo que converta metros para centímetros.
+	Construa um algoritmo que converta metros para centímetros.
 */
 
 #include <stdio.h>
