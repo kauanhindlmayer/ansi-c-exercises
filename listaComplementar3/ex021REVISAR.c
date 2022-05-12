@@ -12,14 +12,18 @@
 
 int main(void){
 
-  int hora = 17;
+  int opcao;
 
   do {
     bilheteria();
-    hora++;
-  } while (hora != 21);
+    printf("\nDeseja repetir?\n[1] - Sim\n[2] - Nao\n");
+    scanf("%i", &opcao);
+    fflush(stdin);
+  } while (opcao == 1);
 
-    return 0;
+  printf("\nValor acumulado: %i\n", acumulador);
+
+  return 0;
 }
 
 void bilheteria() {
@@ -41,5 +45,4 @@ void bilheteria() {
   acumulador += ingressos * 34;
 
   printf("\nPreço total: R$ %i\n", ingressos * 34);
-  printf("\nValor acumulado: %i\n", acumulador);
 }
