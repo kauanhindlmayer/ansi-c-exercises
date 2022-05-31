@@ -29,7 +29,7 @@ int main(void){
 			}
 	}
 
-	printf("A diferença entre os numeros equvale a %i\n", maior - menor);
+	printf("A diferença entre os numeros equivale a %i\n", maior - menor);
 	
 return 0;
 }
