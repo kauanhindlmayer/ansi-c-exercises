@@ -9,18 +9,22 @@
 
 int main(void){ 
 
-  int res = [], num, quantidade;
+  int f1 = 0, f2 = 1, i, r;
 
   printf("Quantos termos voce deseja?\n");
-  scanf("%i", &quantidade);
+  scanf("%i", &i);
   fflush(stdin);
 
-  for (int i = 1; i <= quantidade; i++) {
-    num = [i] + [i * 2];
-    res[i] = num;
+  while (i > 0) {
+    r = f1 + f2;
+    printf("%i, ", r);
+    if(f1 < f2) {
+      f1 = r;
+    } else {
+      f2 = r;
+    }
+    i--;
   }
-
-   printf("%d", res);
 
 	return 0;
 } 

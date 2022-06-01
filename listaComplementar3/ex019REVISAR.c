@@ -10,9 +10,9 @@
 
 int main(void){
     
-  double num1, total;
+  int num1;
 
-  printf("Digite um numero: ");
+  printf("Digite um numero inteiro: ");
   scanf("%f", &num1);
   fflush(stdin);
 
