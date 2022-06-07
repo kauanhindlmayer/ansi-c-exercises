@@ -10,11 +10,26 @@
 
 int main(void){
     
-  int num1;
+  int n, verificador, divisoes = 0;
 
   printf("Digite um numero inteiro: ");
-  scanf("%f", &num1);
+  scanf("%i", &n);
   fflush(stdin);
+
+  for(int i = 1; i <= n; i++) {
+    for(int c = 2; c < i; c++) {
+      if(i % c == 0) {
+        verificador++;
+        divisoes++;
+      }
+    }
+
+    if (verificador == 0) {
+      printf("%i [PRIMO] [Numero de divisoes: %i]\n", i, divisoes);
+    } else {
+      printf("%i [NAO PRIMO] [Numero de divisoes: %i]\n", i, divisoes);
+    }
+  }
 
 	return 0;
 }
