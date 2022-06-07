@@ -38,13 +38,15 @@ int main (void) {
       resto = capacidade - gasto;
     } else {
       reabastecer = (gasto / capacidade) - 1;
-      resto = 0;
+      resto = (capcidade * consumo)
+      
+      // lógica de reabastecimento
     }
 
     printf("\n");
     printf("Necessario reabastecer %.2f vezes.\n", reabastecer);
-    printf("Quantidade minima de combustivel: %.2f\n", gasto);
-    printf("Sobrou: %.2f\n", resto);
+    printf("Quantidade minima de combustivel: %.2f L\n", gasto);
+    printf("Sobrou: %.2f L\n", resto);
 
     printf("\nDeseja repetir? [1] - Sim, [2] - Nao\n");
     scanf("%i", &opcao);
