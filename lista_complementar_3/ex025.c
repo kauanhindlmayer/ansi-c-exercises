@@ -1,8 +1,8 @@
 /*
-Numa eleição existem três candidatos. Faça um programa que peça o 
-número total de eleitores. Peça para cada eleitor votar e ao 
-final mostre o número de votos de cada candidato e seu percentual 
-com relação ao total de eleitores.
+  Numa eleição existem três candidatos. Faça um programa que peça o 
+  número total de eleitores. Peça para cada eleitor votar e ao 
+  final mostre o número de votos de cada candidato e seu percentual 
+  com relação ao total de eleitores.
 */
 
 #include <stdio.h>
@@ -10,7 +10,8 @@ com relação ao total de eleitores.
 
 int main(void) {
 
-  int eleitores, voto, c1 = 0, c2 = 0, c3 = 0;
+  int eleitores, voto;
+  float c1 = 0, c2 = 0, c3 = 0;
    
   printf("Digite o numero de eleitores: ");
   scanf("%i", &eleitores);
@@ -38,9 +39,9 @@ int main(void) {
     }
   }
 
-  printf("Candidato 1 [%.2f%% dos votos]\n", (c1 / eleitores));
-  printf("Candidato 2 [%.2f%% dos votos]\n", (c2 / eleitores));
-  printf("Candidato 3 [%.2f%% dos votos]\n", (c3 / eleitores));
+  printf("Candidato 1 [%.2f%% dos votos]\n", (c1 / eleitores) * 100);
+  printf("Candidato 2 [%.2f%% dos votos]\n", (c2 / eleitores) * 100);
+  printf("Candidato 3 [%.2f%% dos votos]\n", (c3 / eleitores) * 100);
 
   return 0;
 }
