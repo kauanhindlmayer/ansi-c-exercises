@@ -8,7 +8,7 @@
 
 int main (void) {
 
-  float num, vetor[10];
+  float vetor[10];
 
   for(int i = 0; i < 10; i++) {
     printf("Digite um numero: ");
