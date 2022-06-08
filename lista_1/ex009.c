@@ -7,25 +7,25 @@
 
 int main(void){
 
-	float bi1, bi2, bi3, bi4, media;
+	float nota1, nota2, nota3, nota4, media;
 	
 	printf("Digite a nota do primeiro bimestre: ");
-	scanf("%f", &bi1);
+	scanf("%f", &nota1);
 	fflush(stdin);
 
 	printf("Digite a nota do segundo bimestre: ");
-	scanf("%f", &bi2);
+	scanf("%f", &nota2);
 	fflush(stdin);
 
 	printf("Digite a nota do terceiro bimestre: ");
-	scanf("%f", &bi3);
+	scanf("%f", &nota3);
 	fflush(stdin);
 
 	printf("Digite a nota do quarto bimestre: ");
-	scanf("%f", &bi4);
+	scanf("%f", &nota4);
 	fflush(stdin);
 	
-	media = (bi1 + bi2 + bi3 + bi4) / 4;
+	media = (nota1 + nota2 + nota3 + nota4) / 4;
 	
 	if (media >= 7 ){
 		printf("-------------------------\n");
