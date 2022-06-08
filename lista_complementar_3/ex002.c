@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 int main(void){
-	
+
 	int num1, num2;
 
 	printf("Digite um numero: ");

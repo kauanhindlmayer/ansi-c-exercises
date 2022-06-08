@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 int main(void){
-	
+
 	int num, maior, menor;
 
 	printf("Digite um numero: \n");
