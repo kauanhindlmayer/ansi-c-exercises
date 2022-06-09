@@ -1,6 +1,6 @@
 /*
-  Construa um algoritmo que leia um palavras de 15 palavras e 
-  mostre-os na ordem inversa.
+  Construa um algoritmo que leia um palavras de 15 palavras e mostre-os na
+  ordem inversa.
 */
 
 #include <stdio.h>

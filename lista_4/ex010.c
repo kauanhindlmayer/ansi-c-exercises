@@ -1,6 +1,6 @@
 /*
-  Construa  um  algoritmo  que  leia  um  vetor  de  20  elementos  e  
-  coloque-os  em ordem crescente.
+  Construa  um  algoritmo  que  leia  um  vetor  de  20  elementos  e  coloque-os 
+  em ordem crescente.
 */
 
 #include <stdio.h>

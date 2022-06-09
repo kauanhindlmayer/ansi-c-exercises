@@ -1,6 +1,6 @@
 /* 
-	Construa um algoritmo que peça uma temperatura em graus Celsius (�C), transforme e 
-	mostre na tela a temperatura em graus Fahrenheit (�F). 
+	Construa um algoritmo que peça uma temperatura em graus Celsius (�C), 
+	transforme e mostre na tela a temperatura em graus Fahrenheit (�F). 
 */
 
 #include <stdio.h>

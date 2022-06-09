@@ -1,11 +1,13 @@
 /*
-	Uma determinada empresa vende uma m�quina que possui seis motores. Um de 20 CV, dois de 1 CV, e tr�s de 5 CV, que custam 1500, 300 e 600 reais respectivamente cada motor. Existe a necessidade de saber quantos motores dever�o ser comprados de cada modelo e quanto custar� esta compra. Para isto elabore um programa que:  
-
-	Pergunte quantas m�quinas ser�o vendidas;  
-
-	Calcule e apresente na tela a quantidade de motores que dever�o ser comprados de cada modelo;  
-
-	Calcule e apresente na tela o custo total por m�quina, o custo por tipo de motor e o custo total da compra. 
+	Uma determinada empresa vende uma m�quina que possui seis motores. Um de 20 CV, 
+	dois de 1 CV, e tr�s de 5 CV, que custam 1500, 300 e 600 reais respectivamente 
+	cada motor. Existe a necessidade de saber quantos motores dever�o ser comprados 
+	de cada modelo e quanto custar� esta compra. Para isto elabore um programa que:  
+		a) Pergunte quantas m�quinas ser�o vendidas;  
+		b) Calcule e apresente na tela a quantidade de motores que dever�o ser 
+		comprados de cada modelo;  
+		c) Calcule e apresente na tela o custo total por m�quina, o custo por tipo 
+		de motor e o custo total da compra. 
 */
 
 #include <stdio.h>

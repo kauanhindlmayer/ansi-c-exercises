@@ -8,9 +8,9 @@
 
 	Quant	Produto		Unit.	Bruto		 Líquido
 	99	Parafuso		3,00	999.99		  999.99
-	99	Rosca			1,00	999.99		  999.99
-	99	Porca			0,50	999.99		  999.99
-						Total		9999.99
+	99	Rosca			  1,00	999.99		  999.99
+	99	Porca			  0,50	999.99		  999.99
+	Total		9999.99
 */
 
 #include <stdio.h>

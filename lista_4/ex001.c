@@ -1,6 +1,6 @@
 /*
-  Construa um algoritmo que leia um vetor de 10 números inteiros  
-  e mostre a soma dos números.
+  Construa um algoritmo que leia um vetor de 10 números inteiros  e mostre a 
+  soma dos números.
 */
 
 #include <stdio.h>

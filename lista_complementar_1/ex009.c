@@ -1,6 +1,7 @@
 /*
-	Construa um programa que pergunte quanto você ganha por hora e o número de horas trabalhadas 
-	no mes. Calcule e mostre o total do seu salário no referido mês.  
+	Construa um programa que pergunte quanto você ganha por hora e o número de 
+	horas trabalhadas no mes. Calcule e mostre o total do seu salário no referido 
+	mês.  
 */
 
 #include <stdio.h>

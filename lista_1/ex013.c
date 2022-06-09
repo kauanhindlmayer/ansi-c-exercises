@@ -1,6 +1,8 @@
 /* 
-	Elabore um programa para calcular a quantidade necess�ria de latas de tinta para pintar uma parede com X metros de largura por H metros de altura. 
-	Considere que o consumo de latas de tinta por metro quadrado � 3 litros e a quantidade de tinta por lata � 3,6 litros.  
+	Elabore um programa para calcular a quantidade necess�ria de latas de tinta 
+	para pintar uma parede com X metros de largura por H metros de altura. 
+	Considere que o consumo de latas de tinta por metro quadrado � 3 litros 
+	e a quantidade de tinta por lata � 3,6 litros.  
 */
 
 #include <stdio.h>

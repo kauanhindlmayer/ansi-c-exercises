@@ -1,5 +1,6 @@
 /*
-	Construa um algoritmo que pe�a o salário bruto mensal de um funcionário, calcule e apresente os valores conforme modelo abaixo: 
+	Construa um algoritmo que pe�a o salário bruto mensal de um funcionário, 
+	calcule e apresente os valores conforme modelo abaixo: 
 
 	Salário Bruto		: R$  
 

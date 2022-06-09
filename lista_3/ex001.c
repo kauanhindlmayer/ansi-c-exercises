@@ -1,5 +1,6 @@
 /*
-  Faça um programa que peça dois números inteiros e gere os números inteiros que estão no intervalo entre eles.
+  Faça um programa que peça dois números inteiros e gere os números inteiros 
+  que estão no intervalo entre eles.
 */
 
 #include <stdio.h>

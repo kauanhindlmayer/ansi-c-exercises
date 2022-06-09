@@ -7,7 +7,8 @@
     b. Quantas vezes foi necessário reabastecer.
     c. Número de litros consumidos para percorrer a distancia indicada.
     d. Quantos litros restaram no reabastecer após a chegada ao destino.
-    e. O programa deve permitir que o usuário execute esses cálculos quantas vezes ele quiser.
+    e. O programa deve permitir que o usuário execute esses cálculos quantas
+    vezes ele quiser.
 */
 
 #include <stdio.h>

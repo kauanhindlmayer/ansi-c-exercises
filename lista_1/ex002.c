@@ -1,5 +1,6 @@
 /* 
-	Construa um programa que mostre em tela um cartão de visita, use | e – para fazer o cartão. 
+	Construa um programa que mostre em tela um cartão de visita, use | e – para 
+	fazer o cartão. 
 */
 
 #include <stdio.h>
