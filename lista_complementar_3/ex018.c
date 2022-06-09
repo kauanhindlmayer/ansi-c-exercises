@@ -5,25 +5,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void){ 
+void verificaPrimo () {
+  int x, divisores = 0; 
 
-  verificaPrimo();
-  
-	return 0;
-} 
-
-void verificaPrimo() {
-  int verificador = 0, numero;
-
-  printf("Digite um numero: ");
-  scanf("%i", &numero);
+  printf("Digite um numero inteiro: ");
+  scanf("%i", &x);
   fflush(stdin);
 
-  for(int i = 2; i < numero / 2; i++) {
-    if(numero % i == 0) {
-      verificador++;
+  for(int i = 1; i <= x; i++) {
+    if(x % i == 0) {
+      divisores++;
     }
-
-    return (verificador == 0) ? printf("O numero %d e primo!\n", numero) : printf("O numero %d nao e primo!\n", numero);
   }
+ 
+  if(divisores > 2) {
+    printf("\nO numero %i nao e Primo.", x);
+  } else {
+    printf("\nO numero %i e Primo.", x);
+  }
+}
+
+int main(void){
+
+  verificaPrimo();
+
+	return 0;
 }
