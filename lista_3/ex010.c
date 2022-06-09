@@ -5,10 +5,27 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-int main(void) {
+int main(void){
 
+  int base, expoente, res;
 
+  printf("Digite um numero: \n");
+  scanf("%i", &base);
+  fflush(stdin);
 
-  return 0;
+  printf("Digite outro numero: \n");
+  scanf("%i", &expoente);
+  fflush(stdin);
+
+  res = base;
+
+  for (int i = 1; i < expoente; i++) {
+    res *= base;
+  }
+
+  printf("%i elevado a %i equivale a %i.", base, expoente, res);
+    
+	return 0;
 }

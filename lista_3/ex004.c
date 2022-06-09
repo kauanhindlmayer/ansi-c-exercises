@@ -8,7 +8,21 @@
 
 int main(void) {
 
+  int quantidade, nota, soma = 0;
 
+  printf("Digite a quantidade de notas: ");
+  scanf("%i", &quantidade);
+  fflush(stdin);
 
+  for(int i = 0; i < quantidade; i++) {
+    printf("Digite a nota %i: ", i + 1);
+    scanf("%i", &nota);
+    fflush(stdin);
+
+    soma += nota;
+  }
+
+  printf("\nMedia bimestral: %i", soma / quantidade);
+  
   return 0;
 }

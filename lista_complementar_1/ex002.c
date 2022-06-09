@@ -13,7 +13,7 @@ int main(void){
 	scanf("%i", &num1);
 	fflush(stdin);
 	
-	printf("O numero informado foi %i", num1);
+	printf("O numero informado foi %i.", num1);
 	
 	return 0;
 }

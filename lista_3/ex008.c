@@ -9,9 +9,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int main(void){
+    
+  int a = 80.000, b = 200.000, tempo = 1;
 
+  while (a <= b) {
+    a += a * 0.03;
+    b += b * 0.015;
+    tempo++;
+  }
 
-
-  return 0;
-}
+  printf("Sera necessario %i anos para populacao do pais A ultrapassar a de B.", tempo);
+	
+	return 0;
+} 

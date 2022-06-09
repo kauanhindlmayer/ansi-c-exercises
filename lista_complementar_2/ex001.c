@@ -17,10 +17,10 @@ int main(void){
 	fflush(stdin);
 	
 	if (num1 > num2) {
-        printf("O maior numero e %0.1f", num1);
-    } else {
-        printf("O maior numero e %0.1f", num2);
-    }
+    printf("O maior numero e %0.1f", num1);
+  } else {
+    printf("O maior numero e %0.1f", num2);
+  }
 	
 	return 0;
 }

@@ -6,9 +6,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+void repetir() {
 
+  int somaInteiros = 0;
 
+  for (int i = 100; i <= 200; i++) {
+    if (i % 2 == 0) {
+      somaInteiros += i;
+    }
+  }
 
-  return 0;
+  printf("A soma dos numeros pares entre 100 e 200 equivale a %i\n", somaInteiros);
 }
+
+int main(void){
+
+  int repetir;
+
+  repetir();
+
+  printf("Deseja repetir?\n[1] - Sim\n[2] - Nao\n");
+  scanf("%i", &repetir);
+  fflush(stdin);
+
+  repetir == 1 ? repetir() : printf("Fim!");
+	
+	return 0;
+} 
