@@ -8,8 +8,18 @@
 
 int main(void) {
 
+  int vetorA[10], soma = 0;
+
+  for(int i = 0; i <  10; i++) {
+    printf("Digite o elemento %i: ", i + 1);
+    scanf("%i", &vetorA[i]);
+    fflush(stdin);
+
+    vetorA[i] = vetorA[i] * vetorA[i];
+    soma += vetorA[i];
+  }
+
+  printf("\nSoma dos quadrado equivale %i.", soma);
   
-
-
   return 0;
 }

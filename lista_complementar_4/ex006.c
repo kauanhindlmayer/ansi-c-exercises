@@ -7,31 +7,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define tam      2
+
 int main(void) {
  
-  float notas[10][4], media[10], soma;
-  int numero = 0;
+  float notas[tam][4], media[tam], soma;
+  int aprovados = 0;
 
-  for(int i = 0; i < 10; i++) {
-    
+  for(int i = 0; i < tam; i++) {
     for(int j = 0; j < 4; j++) {
-      printf("\nDigite a nota %i: ", i);
+      printf("Digite a nota %i: ", i + 1);
       scanf("%f", &notas[i][j]);
       fflush(stdin);
 
-      soma += j;
+      soma += notas[i][j];
     }
 
     media[i] = soma / 4;
-  }
 
-  for(int i = 0; i < 10; i++) {
+    soma = 0;
+
     if(media[i] >= 7) {
-      numero++;
+      aprovados++;
     }
   }
 
-  printf("\nAlunos aprovados: %i");
+  printf("\nAlunos aprovados: %i", aprovados);
 
   return 0;
 }

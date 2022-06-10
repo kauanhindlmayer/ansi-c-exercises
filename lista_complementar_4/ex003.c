@@ -11,10 +11,12 @@ int main (void) {
   float num, vetor[10];
 
   for(int i = 0; i < 10; i++) {
-    printf("Digite um numero: ");
+    printf("Digite o numero %i: ", i + 1);
     scanf("%f", &vetor[i]);
     fflush(stdin);
   }
+
+  printf("\nOrdem inversa: ");
 
   for(int i = 9; i >= 0; i--) {
     printf("%.1f, ", vetor[i]);

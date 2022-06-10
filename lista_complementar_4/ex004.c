@@ -16,13 +16,14 @@ int main(void) {
     fflush(stdin);
   }
 
-  for(int i = 0; i < 4; i++) {
-    printf("%f, ", notas[i]);
+  printf("\nNotas: ");
 
+  for(int i = 0; i < 4; i++) {
+    printf("%.1f, ", notas[i]);
     soma += notas[i];
   }
 
-  printf("\nMedia: %f", soma / 4);
+  printf("\nMedia: %.1f", soma / 4);
 
   return 0;
 }
