@@ -25,7 +25,7 @@ int main(void) {
   for(int i = 0; i < tam; i++) {
     for(int j = 0; j < tam; j++) {
       printf("Elemento %i: ", i + 1);
-      scanf("%i", &vetor2[i][j]);
+      scanf("%i\t", &vetor2[i][j]);
       fflush(stdin);
     }
   }
