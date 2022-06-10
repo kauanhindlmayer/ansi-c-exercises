@@ -23,11 +23,13 @@ int main(void) {
   scanf("%i", &x);
   fflush(stdin);
 
-  if(parImpar(x) == 0) {
-    printf("\nO numero %i e PAR.", x);
-  } else {
-    printf("\nO numero %i e IMPAR.", x);
-  }
+  // if(parImpar(x) == 0) {
+  //   printf("\nO numero %i e PAR.", x);
+  // } else {
+  //   printf("\nO numero %i e IMPAR.", x);
+  // }
+
+  printf("%i", parImpar(x));
 
   return 0;
 }
