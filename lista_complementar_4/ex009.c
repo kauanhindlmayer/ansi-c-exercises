@@ -9,7 +9,7 @@
 
 int main(void) {
 
-  float notas[10], soma = 0, media, notasAcima;
+  float notas[10], soma = 0, media, notas_superiores;
   int i ,j;
 
   for(i = 0; i < 10; i++) {
@@ -24,11 +24,11 @@ int main(void) {
   
   for(j = 0; j < 10; j++) {
     if(notas[j] > media) {
-      notasAcima++;
+      notas_superiores++;
     }
   }  
 
-  printf("\nNotas superiores a media: %.1lf", notasAcima);
+  printf("\nNotas superiores a media: %.1lf", notas_superiores);
 
   return 0;
 }
