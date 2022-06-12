@@ -6,10 +6,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define tam       3
+
 int main(void) {
 
-  
+  int k, vetor[tam];
 
+  printf("Digite um numero inteiro: ");
+  scanf("%i", &k);
+  fflush(stdin);
+
+  for(int i = 0; i < tam; i++) {
+    printf("Digite o elemento %i: ", i  + 1);
+    scanf("%i", &vetor[i]);
+    fflush(stdin);
+
+    vetor[i] = vetor[i] * k;
+  }
+
+  printf("\nVetor multiplicado: ");
+  for(int i = 0; i < tam; i++) {
+    printf("%i, ", vetor[i]);
+  }
 
   return 0;
 }
