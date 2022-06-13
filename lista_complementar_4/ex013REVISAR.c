@@ -11,9 +11,9 @@
 
 int main(void) {
 
-  int numeros[tam], numeros_par[tam], numeros_impar[tam];
+  int numeros[tam], numeros_par[tam], numeros_impar[tam], i;
   
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Digite o numero %i: ", i + 1);
     scanf("%i", &numeros[i]);
     fflush(stdin);
@@ -26,18 +26,18 @@ int main(void) {
   }
     
   printf("\nNumeros: ");
-  for(int j = 0; j < tam; j++) {
-    printf("%i, ", numeros[j]);
+  for(i = 0; i < tam; i++) {
+    printf("%i, ", numeros[i]);
   }
 
   printf("\nNumeros PAR: ");
-  for(int k = 0; k < tam; k++) {
-    printf("%i, ", numeros_par[k]);
+  for(i = 0; i < tam; i++) {
+    printf("%i, ", numeros_par[i]);
   }
 
   printf("\nNumeros IMPAR: ");
-  for(int l = 0; l < tam; l++) {
-    printf("%i, ", numeros_impar[l]);
+  for(i = 0; i < tam; i++) {
+    printf("%i, ", numeros_impar[i]);
   }
 
   return 0;

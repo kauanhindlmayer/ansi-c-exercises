@@ -13,16 +13,16 @@
 
 int main(void) {
 
-  int vetorA[tam], vetorB[tam], j = tam - 1;
+  int vetorA[tam], vetorB[tam], j = tam - 1, i;
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorA[i]);
     fflush(stdin);
   }
 
   printf("\nVetor resultante: ");
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     vetorB[i] = vetorA[i] - vetorA[j];
     printf("%i, ", vetorB[i]);
     j--;

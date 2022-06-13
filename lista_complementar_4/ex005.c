@@ -9,9 +9,9 @@
 int main(void) {
 
   char caracteres[10], c;
-  int consoantes = 0;
+  int consoantes = 0, i;
 
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     printf("Digite um caractere: ");
     scanf("%s", &c);
     fflush(stdin);
@@ -26,7 +26,7 @@ int main(void) {
 
   printf("\nConsoantes digitadas: ");
 
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     char letra = caracteres[i];
 
     if(letra != 'a' && letra != 'e' && letra != 'i' && letra != 'o' && letra != 'u' 

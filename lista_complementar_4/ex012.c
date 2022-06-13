@@ -8,9 +8,9 @@
 
 int main(void) {
 
-  int vetorA[10], soma = 0;
+  int vetorA[10], soma = 0, i;
 
-  for(int i = 0; i <  10; i++) {
+  for(i = 0; i <  10; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorA[i]);
     fflush(stdin);

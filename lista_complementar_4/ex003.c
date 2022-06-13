@@ -9,8 +9,9 @@
 int main (void) {
 
   float num, vetor[10];
+  int i;
 
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     printf("Digite o numero %i: ", i + 1);
     scanf("%f", &vetor[i]);
     fflush(stdin);
@@ -18,7 +19,7 @@ int main (void) {
 
   printf("\nOrdem inversa: ");
 
-  for(int i = 9; i >= 0; i--) {
+  for(i = 9; i >= 0; i--) {
     printf("%.1f, ", vetor[i]);
   }
 

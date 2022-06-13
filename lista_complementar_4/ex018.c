@@ -9,27 +9,27 @@
 
 int main(void) {
 
-  int vetorA[10], vetorB[10], vetorC[20];
+  int vetorA[10], vetorB[10], vetorC[20], i;
 
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorA[i]);
     fflush(stdin);
   }
 
-  for(int j = 0; j < 10; j++) {
-    printf("Digite o elemento %i: ", j + 1);
-    scanf("%i", &vetorB[j]);
+  for(i = 0; i < 10; i++) {
+    printf("Digite o elemento %i: ", i + 1);
+    scanf("%i", &vetorB[i]);
     fflush(stdin);
   }
 
   printf("\nVetor C: ");
-  for(int k = 0; k < 10; k++) {
-    vetorC[k] = vetorA[k];
-    vetorC[k + 1] = vetorB[k];
+  for(i = 0; i < 10; i++) {
+    vetorC[i] = vetorA[i];
+    vetorC[i + 1] = vetorB[i];
 
-    printf("%i, ", vetorC[k]);
-    printf("%i, ", vetorC[k + 1]);
+    printf("%i, ", vetorC[i]);
+    printf("%i, ", vetorC[i + 1]);
   }
   
   return 0;

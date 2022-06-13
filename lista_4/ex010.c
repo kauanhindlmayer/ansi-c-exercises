@@ -10,16 +10,16 @@
 
 int main(void) {
 
-  int vetor[tam], aux;
+  int vetor[tam], aux, i, j;
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Entre com o elemento %i: ", i + 1);
     scanf("%i", &vetor[i]);
     fflush(stdin);
   }
 
-  for(int i = 0; i < tam; i++) {
-    for(int i = 0; i < tam; i++) {
+  for(j = 0; j < tam; j++) {
+    for(i = 0; i < tam; i++) {
       if(vetor[i] > vetor[i + 1]) {
         aux = vetor[i];
         vetor[i] = vetor[i + 1];
@@ -30,7 +30,7 @@ int main(void) {
 
   printf("Vetor em ordem crescente:\n");
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("%i, ", vetor[i]);
   }
   

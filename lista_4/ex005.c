@@ -9,14 +9,15 @@
 int main(void) {
 
   char palavras[50][15];
+  int i;
 
-  for(int i = 0; i < 15; i++) {
+  for(i = 0; i < 15; i++) {
     printf("Digite a palavra %i: ", i + 1);
     gets(palavras[i]);
     fflush(stdin);
   } 
 
-  for(int i = 14; i >= 0; i--) {
+  for(i = 14; i >= 0; i--) {
     printf("%s, ", palavras[i]);
   }
 

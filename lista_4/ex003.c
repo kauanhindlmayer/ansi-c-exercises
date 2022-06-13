@@ -8,15 +8,15 @@
 
 int main (void) {
 
-  float vetor[10];
+  float vetor[10], i;
 
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     printf("Digite um numero: ");
     scanf("%f", &vetor[i]);
     fflush(stdin);
   }
 
-  for(int i = 9; i >= 0; i--) {
+  for(i = 9; i >= 0; i--) {
     printf("%.1f, ", vetor[i]);
   }
 

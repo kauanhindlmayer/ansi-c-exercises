@@ -10,10 +10,10 @@
 
 int main(void) {
 
-  int vetorA[5], vetorB[10], vetorC[15], vetorD[15], acumulador;
+  int vetorA[5], vetorB[10], vetorC[15], vetorD[15], acumulador, i;
 
   printf("Entre com os elementos do vetor A\n");
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorA[i]);
     fflush(stdin);
@@ -22,21 +22,21 @@ int main(void) {
   }
 
   printf("Entre com os elementos do vetor B\n");
-  for(int j = 0; j < 10; j++) {
-    printf("Digite o elemento %i: ", j + 1);
-    scanf("%i", &vetorB[j]);
+  for(i = 0; i < 10; i++) {
+    printf("Digite o elemento %i: ", i + 1);
+    scanf("%i", &vetorB[i]);
     fflush(stdin);
 
-    vetorC[5 + j] = vetorB[j];
+    vetorC[5 + i] = vetorB[i];
 
-    for(int l = 0; l < 5; l++) {
-      if(vetorB[j] != vetorA[l])
+    for(i = 0; i < 5; i++) {
+      if(vetorB[i] != vetorA[i])
     }
   }
 
   printf("\nVetor C: ");
-  for(int k = 0; k < 15; k++) {
-    printf("%i, ", vetorC[k]);
+  for(i = 0; i < 15; i++) {
+    printf("%i, ", vetorC[i]);
   }
 
   return 0;

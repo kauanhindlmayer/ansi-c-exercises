@@ -12,18 +12,18 @@
 int main(void) {
  
   float notas[tam][4], media[tam], soma;
-  int matriculas[tam];
+  int matriculas[tam], i, j;
 
-  for(int k = 0; k < tam; k++) {
-    printf("Digite a matricula do aluno %i: ", k + 1);
-    scanf("%i", &matriculas[k]);
+  for(i = 0; i < tam; i++) {
+    printf("Digite a matricula do aluno %i: ", i + 1);
+    scanf("%i", &matriculas[i]);
     fflush(stdin);
   }
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Entre com as notas do aluno %i\n", i + 1);
 
-    for(int j = 0; j < 4; j++) {
+    for(j = 0; j < 4; j++) {
       printf("Digite a nota %i: ", j + 1);
       scanf("%f", &notas[i][j]);
       fflush(stdin);
@@ -38,7 +38,7 @@ int main(void) {
 
   printf("\nAluno:\tMatricula:\tMedia:");
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("\n%i\t%i\t\t%.1f", i + 1, matriculas[i], media[i]);
   }
 

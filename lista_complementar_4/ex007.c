@@ -9,10 +9,10 @@
 
 int main(void) {
 
-  int idade[5];
+  int idade[5], i;
   float altura[5];
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     printf("\nEntre com os dados da pessoa %i\n", i +  1);
     printf("Digite sua idade: ");
     scanf("%i", &idade[i]);
@@ -24,8 +24,7 @@ int main(void) {
   }
 
   printf("\nOrdem inversa: ");
-
-  for(int i = 4; i >= 0; i--) {
+  for(i = 4; i >= 0; i--) {
     printf("\nPessoa %i: %i anos - %.1fm", i + 1, idade[i], altura[i]);
   }
   

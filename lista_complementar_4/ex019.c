@@ -9,38 +9,38 @@
 
 int main(void) {
 
-  int vetorA[10], vetorB[10], vetorC[10], vetorD[30];
+  int vetorA[10], vetorB[10], vetorC[10], vetorD[30], i;
 
   printf("Entre com os valores do Vetor A\n");
-  for(int i = 0; i < 10; i++) {
+  for(i = 0; i < 10; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorA[i]);
     fflush(stdin);
   }
 
   printf("Entre com os valores do Vetor B\n");
-  for(int j = 0; j < 10; j++) {
-    printf("Digite o elemento %i: ", j + 1);
-    scanf("%i", &vetorB[j]);
+  for(i = 0; i < 10; i++) {
+    printf("Digite o elemento %i: ", i + 1);
+    scanf("%i", &vetorB[i]);
     fflush(stdin);
   }
 
   printf("Entre com os valores do Vetor C\n ");
-  for(int l = 0; l < 10; l++) {
-    printf("Digite o elemento %i: ", l + 1);
-    scanf("%i", &vetorC[l]);
+  for(i = 0; i < 10; i++) {
+    printf("Digite o elemento %i: ", i + 1);
+    scanf("%i", &vetorC[i]);
     fflush(stdin);
   }
 
   printf("\nVetor D: ");
-  for(int k = 0; k < 10; k++) {
-    vetorD[k] = vetorA[k];
-    vetorD[k + 1] = vetorB[k];
-    vetorD[k + 2] = vetorC[k];
+  for(i = 0; i < 10; i++) {
+    vetorD[i] = vetorA[i];
+    vetorD[i + 1] = vetorB[i];
+    vetorD[i + 2] = vetorC[i];
 
-    printf("%i, ", vetorD[k]);
-    printf("%i, ", vetorD[k + 1]);
-    printf("%i, ", vetorD[k + 2]);
+    printf("%i, ", vetorD[i]);
+    printf("%i, ", vetorD[i + 1]);
+    printf("%i, ", vetorD[i + 2]);
   }
   
   return 0;

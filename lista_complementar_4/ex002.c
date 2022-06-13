@@ -8,9 +8,9 @@
 
 int main(void) {
 
-  int num, vetor[5], soma = 0, multiplicacao = 1;
+  int num, vetor[5], soma = 0, multiplicacao = 1, i;
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     printf("Digite um numero: ");
     scanf("%i", &vetor[i]);
     fflush(stdin);
@@ -18,15 +18,15 @@ int main(void) {
 
   printf("\n");
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     printf("%i, ", vetor[i]);
   }
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     soma += vetor[i];
   }
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     multiplicacao *= vetor[i];
   }
 

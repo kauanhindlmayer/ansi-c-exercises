@@ -12,8 +12,9 @@
 int main(void) {
 
   float data_nasc[tam], idades[tam], soma = 0, media_idade;
+  int i;
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Digite a data de nascimento %i: ", i + 1);
     scanf("%f", &data_nasc[i]);
     fflush(stdin);
@@ -25,7 +26,7 @@ int main(void) {
 
   printf("\nIdade media do grupo: %.1f", media_idade);
   printf("\nIdade de cada membro: ");
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("%.1f, ", idades[i]);
   }
 

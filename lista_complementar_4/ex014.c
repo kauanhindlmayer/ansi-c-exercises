@@ -10,13 +10,13 @@
 
 int main(void) {
 
-  int k, vetor[tam];
+  int vetor[tam], k, i;
 
   printf("Digite um numero inteiro: ");
   scanf("%i", &k);
   fflush(stdin);
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("Digite o elemento %i: ", i  + 1);
     scanf("%i", &vetor[i]);
     fflush(stdin);
@@ -25,7 +25,7 @@ int main(void) {
   }
 
   printf("\nVetor multiplicado: ");
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("%i, ", vetor[i]);
   }
 

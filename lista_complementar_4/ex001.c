@@ -7,16 +7,16 @@
 
 int main(void){
 
-  int num, vetor[5];
+  int vetor[5], i;
 
-  for(int i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
     printf("Digite um numero: ");
     scanf("%i", &vetor[i]);
     fflush(stdin);
   }
   
-  for(int c = 0; c < 5; c++) {
-    printf("%d, ", vetor[c]);
+  for(i = 0; i < 5; i++) {
+    printf("%d, ", vetor[i]);
   }
 
 	return 0;

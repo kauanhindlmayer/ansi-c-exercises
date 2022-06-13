@@ -12,10 +12,10 @@
 int main(void) {
  
   float notas[tam][4], media[tam], soma;
-  int aprovados = 0;
+  int aprovados = 0, i, j;
 
-  for(int i = 0; i < tam; i++) {
-    for(int j = 0; j < 4; j++) {
+  for(i = 0; i < tam; i++) {
+    for(j = 0; j < 4; j++) {
       printf("Digite a nota %i: ", i + 1);
       scanf("%f", &notas[i][j]);
       fflush(stdin);

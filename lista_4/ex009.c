@@ -10,10 +10,10 @@
 
 int main(void) {
 
-  int vetor[tam][tam], k, vetor2[tam];
+  int vetor[tam][tam], k, vetor2[tam], i, j;
 
-  for(int i = 0; i < tam; i++) {
-    for(int j = 0; j < tam; j++) {
+  for(i = 0; i < tam; i++) {
+    for(j = 0; j < tam; j++) {
       printf("Entre com o elemento %i: ", i + 1);
       scanf("%i", &vetor[i][j]);
       fflush(stdin);
@@ -24,17 +24,17 @@ int main(void) {
   scanf("%i", &k);
   fflush(stdin);
 
-  for(int i = 0; i < tam; i++) {
-    int j = 0;
+  for(i = 0; i < tam; i++) {
+    j = 0;
     vetor[i][j] = vetor[i][j] * k;
     j++;
   }
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     vetor2[i] = vetor[i][0] * vetor[i][1] * vetor[i][2];
   }
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("\n");
     printf("%i\t", vetor2[i]);
   }

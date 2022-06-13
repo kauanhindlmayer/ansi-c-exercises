@@ -12,10 +12,10 @@
 int main(void) {
 
   float idades[tam], alturas[tam], soma_altura = 0, media_altura;
-  int acumulador = 0;
+  int acumulador = 0, i;
 
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     printf("\nDigite a idade %i: ", i + 1);
     scanf("%f", &idades[i]);
     fflush(stdin);
@@ -28,7 +28,7 @@ int main(void) {
     media_altura = soma_altura / tam;
   }
 
-  for(int i = 0; i < tam; i++) {
+  for(i = 0; i < tam; i++) {
     if(idades[i] >= 13 && alturas[i] < media_altura) {
       acumulador++;
     }
