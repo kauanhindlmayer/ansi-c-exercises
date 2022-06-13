@@ -28,6 +28,10 @@ int main(void) {
     fflush(stdin);
 
     vetorC[5 + j] = vetorB[j];
+
+    for(int l = 0; l < 5; l++) {
+      if(vetorB[j] != vetorA[l])
+    }
   }
 
   printf("\nVetor C: ");
