@@ -12,6 +12,12 @@
 
 int main (void) {
 
+  char nome[50];
+
+  printf("Digite seu nome completo (sem espacos): ");
+  gets(nome);
+  fflush(stdin);
+
 
   return 0;
 }

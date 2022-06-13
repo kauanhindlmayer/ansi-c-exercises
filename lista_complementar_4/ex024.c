@@ -7,10 +7,29 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(void) {
 
-  
+  char nome[50], tam, i;
+
+  for(i = 0; i <= 1; i++) {
+    printf("Digite seu nome: ");
+    gets(nome);
+    fflush(stdin);
+
+    if(nome != char) {
+      printf("Nome invalido!\n");
+      i--;
+    }
+  }
+
+
+  tam = strlen(nome);
+
+  for(i = 0; i < tam; i++) {
+    printf("%c ", nome[i]);
+  }
 
 
   return 0;
