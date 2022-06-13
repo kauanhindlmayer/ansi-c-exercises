@@ -9,13 +9,13 @@
 
 int main(void){
 
-  int turmas, alunos, media, soma = 0;
+  int turmas, alunos, media, soma = 0, i;
 
   printf("Digite a quantidade de turmas: ");
   scanf("%i", &turmas);
   fflush(stdin);
 
-  for (int i = 1; i <= turmas; i++) {
+  for (i = 1; i <= turmas; i++) {
     printf("Digite a quantidade de alunos da turma %i: ", i);
     scanf("%i", &alunos);
     fflush(stdin);

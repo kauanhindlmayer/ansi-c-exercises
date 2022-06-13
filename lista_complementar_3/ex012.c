@@ -9,10 +9,11 @@
 int main(void){ 
 
   float numerador = 1, soma = 0;
+  int i;
 
   printf("------------------------------\n");
 
-  for (int i = 1; i <= 50; i++) {
+  for (i = 1; i <= 50; i++) {
     soma += (numerador / i);
     printf("%0.1f\n", soma); 
     numerador += 2;

@@ -9,7 +9,7 @@
 
 int main(void){
 
-  int base, expoente;
+  int base, expoente, i;
 
   printf("Digite um numero: \n");
   scanf("%i", &base);
@@ -21,7 +21,7 @@ int main(void){
 
   int res = base;
 
-  for (int i = 1; i < expoente; i++) {
+  for (i = 1; i < expoente; i++) {
     res *= base;
   }
 

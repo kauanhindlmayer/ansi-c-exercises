@@ -6,13 +6,13 @@
 #include <stdlib.h>
 
 void verificaPrimo () {
-  int x, divisores = 0; 
+  int x, divisores = 0, i; 
 
   printf("Digite um numero inteiro: ");
   scanf("%i", &x);
   fflush(stdin);
 
-  for(int i = 1; i <= x; i++) {
+  for(i = 1; i <= x; i++) {
     if(x % i == 0) {
       divisores++;
     }

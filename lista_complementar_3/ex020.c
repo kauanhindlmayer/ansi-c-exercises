@@ -25,13 +25,13 @@ int main(void){
 }
 
 void tabuada() {
-  int num1;
+  int num1, i;
 
   printf("Digite um numero: ");
   scanf("%i", &num1);
   fflush(stdin);
 
-  for(int i = 10; i >= 1; i--) {
+  for(i = 10; i >= 1; i--) {
     printf("%i * %i = %i\n", i, num1, i * num1);
   }
 }

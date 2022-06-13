@@ -9,10 +9,11 @@
 int main(void){ 
 
   float soma = 0, num1 = 37, num2 = 38;
+  int i;
 
   printf("------------------------------\n");
 
-  for (int i = 1; i <= 37; i++) {
+  for (i = 1; i <= 37; i++) {
     soma += (num1 * num2 / i);
     printf("%0.1f\n", soma); 
     num1--;

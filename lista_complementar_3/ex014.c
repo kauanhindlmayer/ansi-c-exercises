@@ -9,9 +9,9 @@
 
 int main(void){
     
-  int num, soma = 0, par = 0, impar = 0;
+  int num, soma = 0, par = 0, impar = 0, i;
 
-  for(int i = 1; i <= 10; i++) {
+  for(i = 1; i <= 10; i++) {
     printf("Digite um numero: \n");
     scanf("%i", &num);
     fflush(stdin);

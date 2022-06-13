@@ -8,7 +8,7 @@
 
 int main(void){
 
-	int num1, num2, c;
+	int num1, num2, i;
 
 	printf("Digite um numero:\n");
 	scanf("%i", &num1);
@@ -20,8 +20,8 @@ int main(void){
 
 	printf("\nValores inteiros no intervalo de %i e %i:\n", num1, num2);
 
-	for (c = num1 + 1; c < num2; c++) {
-		printf("%i, ", c);
+	for (i = num1 + 1; i < num2; i++) {
+		printf("%i, ", i);
 	}
 
 	return 0;

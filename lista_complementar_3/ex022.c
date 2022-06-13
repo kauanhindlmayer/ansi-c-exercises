@@ -10,13 +10,13 @@
 
 int main(void) {
 
-  int numero, idade, total = 0;
+  int numero, idade, total = 0, i;
 
   printf("Digite o numero de pessoas: ");
   scanf("%i", &numero);
   fflush(stdin);
 
-  for(int i = 1; i <= numero; i++) {
+  for(i = 1; i <= numero; i++) {
     printf("Digite a idade da pessoa %i: ", i);
     scanf("%i", &idade);
     fflush(stdin);

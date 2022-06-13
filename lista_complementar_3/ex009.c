@@ -9,9 +9,9 @@
 
 void repetir() {
 
-  int somaInteiros = 0;
+  int somaInteiros = 0, i;
 
-  for (int i = 100; i <= 200; i++) {
+  for (i = 100; i <= 200; i++) {
     if (i % 2 == 0) {
       somaInteiros += i;
     }

@@ -14,10 +14,10 @@
 
 int main(void) {
 
-  int opcao, quantidade, p1 = 0, p2 = 0, p3 = 0;
+  int opcao, quantidade, p1 = 0, p2 = 0, p3 = 0, i;
   float faturamento;
 
-  for(int i = 1; i <= 3; i++) {
+  for(i = 1; i <= 3; i++) {
     printf("[1] Picole Vermelho R$ 1,00\n");
     printf("[2] Picole Verde R$ 1,20\n");
     printf("[3] Picole Azul R$ 2,50\n");

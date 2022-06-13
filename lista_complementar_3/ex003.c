@@ -8,17 +8,17 @@
 
 int main(void){
 
-	int num, maior, menor;
+	int num, maior, menor, i;
 
-	printf("Digite um numero: \n");
+	printf("Digite o numero 1: ");
 	scanf("%i", &num);
 	fflush(stdin);
 
 	maior = num;
 	menor = num;
 
-	for (int i = 1; i < 10; i++) {
-			printf("Digite um numero: \n");
+	for (i = 1; i < 10; i++) {
+			printf("Digite o numero %i: ", i + 1);
 			scanf("%i", &num);
 			fflush(stdin);
 
@@ -29,7 +29,7 @@ int main(void){
 			}
 	}
 
-	printf("A diferença entre os numeros equivale a %i\n", maior - menor);
+	printf("A diferença entre os numeros equivale a %i.\n", maior - menor);
 	
 return 0;
 }

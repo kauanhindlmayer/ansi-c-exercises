@@ -8,14 +8,14 @@
 
 int main(void){
 
-  int num, res;
+  int num, res, i;
 
   printf("Digite qual numero deseja ver a tabuada: \n");
   scanf("%i", &num);
   fflush(stdin);
 
   printf("---------- TABUADA ----------\n");
-  for (int i = 1; i <= 10; i++) {
+  for (i = 1; i <= 10; i++) {
     res = num * i;
     printf("%i * %i = %i\n", num, i, res);
   }

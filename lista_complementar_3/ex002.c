@@ -8,7 +8,7 @@
 
 int main(void){
 
-	int num1, num2;
+	int num1, num2, i;
 
 	printf("Digite um numero: ");
 	scanf("%i", &num1);
@@ -20,22 +20,19 @@ int main(void){
 
 	if (num1 > num2) {
 		printf("\nValores pares que estao no intervalo de %i e %i:\n", num1, num2);
-
-		for (int i = num1 - 1; i > num2; i--) {
+		for (i = num1 - 1; i > num2; i--) {
 			if (i % 2 == 0) {
-					printf("%i, ", i);
+				printf("%i, ", i);
 			}
 		} 
 
 	} else {
 		printf("\nValores pares que estao no intervalo de %i e %i:\n", num1, num2);
-
-		for (int i = num1 + 1; i < num2; i++) {
+		for (i = num1 + 1; i < num2; i++) {
 			if (i % 2 == 0) {
-					printf("%i, ", i);
+				printf("%i, ", i);
 			}
 		}
-
 	}
 
 	printf("\n");

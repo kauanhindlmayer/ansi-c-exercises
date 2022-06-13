@@ -22,7 +22,7 @@ void verificaPrimo (int x) {
 }
 
 int main(void){
-  int numero;
+  int numero, i;
 
   printf("Digite um numero inteiro: ");
   scanf("%i", &numero);
@@ -30,7 +30,7 @@ int main(void){
 
   printf("\nPrimos entre 1 e %i: ", numero);
 
-  for(int i = 1; i <= numero; i++) {
+  for(i = 1; i <= numero; i++) {
     verificaPrimo(i);
   }
 

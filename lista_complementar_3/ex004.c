@@ -8,13 +8,13 @@
 
 int main(void){
 
-  int media, nota, quantidade, soma = 0;
+  int media, nota, quantidade, soma = 0, i;
 
   printf("Informe a quantidade de notas: \n");
   scanf("%i", &quantidade);
   fflush(stdin);
 
-  for (int i = 1; i <= quantidade; i++) {
+  for (i = 1; i <= quantidade; i++) {
     printf("Informe a nota: \n ");
     scanf("%i", &nota);
     fflush(stdin);

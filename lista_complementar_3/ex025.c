@@ -10,13 +10,13 @@
 int main(void) {
 
   int eleitores, voto;
-  float c1 = 0, c2 = 0, c3 = 0;
+  float c1 = 0, c2 = 0, c3 = 0, i;
    
   printf("Digite o numero de eleitores: ");
   scanf("%i", &eleitores);
   fflush(stdin);
 
-  for(int i = 1; i <= eleitores; i++) {
+  for(i = 1; i <= eleitores; i++) {
     printf("[1] - Candidato 1\n");
     printf("[2] - Candidato 2\n");
     printf("[3] - Candidato 3\n");
