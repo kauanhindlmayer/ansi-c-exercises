@@ -9,7 +9,7 @@
 
 int main(void) {
 
-  char palavras[50][2], i;  
+  char palavras[20][2], i;  
   int tam, comp;
 
   for(i = 0; i < 2; i++) {
