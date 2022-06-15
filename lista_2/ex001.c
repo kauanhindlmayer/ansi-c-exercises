@@ -6,21 +6,23 @@
 #include <stdlib.h>
 
 int main(void) {
-  int num1 = 0, num2 = 0;
+  int num1, num2;
 
   printf("Digite um numero: ");
   scanf("%i", &num1);
   fflush(stdin);
 
-  printf("\nDigite outro numero: ");
-  scanf("%i", &num1);
+  printf("Digite outro numero: ");
+  scanf("%i", &num2);
   fflush(stdin);
 
   if(num1 == num2) {
     printf("\nOs dois numeros sao iguais.");
-  } else if(num1 > num2) {
+  }
+  if(num1 > num2) {
     printf("\nO numero %i e o maior.", num1);
-  } else {
+  }
+  if(num2 > num1) {
     printf("\nO numero %i e o maior.", num2);
   }
 

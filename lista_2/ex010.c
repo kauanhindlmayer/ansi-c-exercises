@@ -21,49 +21,27 @@ int main(void) {
   scanf("%i", &menu);
   fflush(stdin);
 
+  if(menu >= 1 && menu <= 4) {
+    printf("Digite o primeiro numero: ");
+    scanf("%i", &num1);
+    fflush(stdin);
+
+    printf("Digite o segundo numero: ");
+    scanf("%i", &num2);
+    fflush(stdin);
+  }
+
   switch(menu) {
     case 1:
-      printf("\nDigite o primeiro numero: ");
-      scanf("%i", &num1);
-      fflush(stdin);
-
-      printf("\nDigite o segundo numero: ");
-      scanf("%i", &num2);
-      fflush(stdin);
-
       printf("\nA soma entre %i e %i equivale a %i.", num1, num2, num1 + num2);
       break;
     case 2:
-      printf("\nDigite o primeiro numero: ");
-      scanf("%i", &num1);
-      fflush(stdin);
-
-      printf("\nDigite o segundo numero: ");
-      scanf("%i", &num2);
-      fflush(stdin);
-
       printf("\nA subtracao entre %i e %i equivale a %i.", num1, num2, num1 - num2);
       break;
     case 3:
-      printf("\nDigite o primeiro numero: ");
-      scanf("%i", &num1);
-      fflush(stdin);
-
-      printf("\nDigite o segundo numero: ");
-      scanf("%i", &num2);
-      fflush(stdin);
-
       printf("\nA multiplicacao entre %i e %i equivale a %i.", num1, num2, num1 * num2);
       break;
     case 4: 
-      printf("\nDigite o primeiro numero: ");
-      scanf("%i", &num1);
-      fflush(stdin);
-
-      printf("\nDigite o segundo numero: ");
-      scanf("%i", &num2);
-      fflush(stdin);
-
       printf("\nA divisao entre %i e %i equivale a %i.", num1, num2, num1 / num2);
       break;
     case 5:
