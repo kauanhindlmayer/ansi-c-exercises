@@ -1,8 +1,8 @@
 /* 
-	Elabore um programa para calcular a quantidade necess�ria de latas de tinta 
+	Elabore um programa para calcular a quantidade necessária de latas de tinta 
 	para pintar uma parede com X metros de largura por H metros de altura. 
-	Considere que o consumo de latas de tinta por metro quadrado � 3 litros 
-	e a quantidade de tinta por lata � 3,6 litros.  
+	Considere que o consumo de latas de tinta por metro quadrado é 3 litros 
+	e a quantidade de tinta por lata é 3,6 litros.  
 */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ int main(void){
 	consumo = area * 3;
 	latas = consumo / 3.6;
 	
-	printf("A quantidade necessaria de latas de tinta e %0.2f\n", latas);
+	printf("\nA quantidade necessaria de latas de tinta e %0.2f\n", latas);
 	
 	return 0;
 }

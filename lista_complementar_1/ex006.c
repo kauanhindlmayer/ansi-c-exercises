@@ -17,7 +17,7 @@ int main(void){
 	area = lado * lado;
 	dobro = area * 2;
 	
-	printf("A area do quadrado equivale a %i e o seu dobro equivale a %i", area, dobro);
+	printf("\nA area do quadrado equivale a %i e o seu dobro equivale a %i", area, dobro);
 	
 	return 0;
 }

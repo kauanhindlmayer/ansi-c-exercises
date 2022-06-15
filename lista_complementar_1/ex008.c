@@ -28,7 +28,7 @@ int main(void){
 
 	media = (nota1 + nota2 + nota3 + nota4) / 4;
 	
-	printf("Media: %0.1f", media);
+	printf("\nMedia: %0.1f", media);
 	
 	return 0;
 }

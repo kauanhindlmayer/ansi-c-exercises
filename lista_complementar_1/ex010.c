@@ -19,6 +19,6 @@ int main(void){
 	imposto = salarioBruto * 0.08;
 	salarioLiquido = salarioBruto - imposto;
 	
-	printf("O total do seu salario neste mes e %0.1i", salarioLiquido);
+	printf("\nO total do seu salario neste mes e %0.1i", salarioLiquido);
 	return 0;
 }

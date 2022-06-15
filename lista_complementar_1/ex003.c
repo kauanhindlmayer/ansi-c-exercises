@@ -15,7 +15,7 @@ int main(void){
 	
 	area = 3.14 * (raio * raio);
 	
-	printf("A area do circulo e %0.2f", area);
+	printf("\nA area do circulo e %0.2f", area);
 	
 	return 0;
 }

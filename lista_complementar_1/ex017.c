@@ -18,7 +18,7 @@
 
 int main(void){
 
-	char nomeCliente;
+	char nomeCliente[100];
 	int quantidadeParafusos, quantidadeRoscas, quantidadePorcas;
 	float precoParafusos, precoRoscas, precoPorcas, descontoParafusos, descontoRoscas;
 	float descontoPorcas, totalBruto, totalLiquido;
@@ -48,7 +48,7 @@ int main(void){
 	descontoRoscas = precoRoscas * 0.973;
 	totalLiquido = descontoParafusos + descontoRoscas + descontoPorcas;
 
-	printf("Cliente: %i\n", nomeCliente);
+	printf("Cliente: %s\n", nomeCliente);
 	printf("Quant\tProduto   \tUnit.\tBruto\tLiquido\n");
 	printf("%i\tParafuso   \t3,00\t%0.2f\t%0.2f\n", quantidadeParafusos, precoParafusos, descontoParafusos);
 	printf("%i\tRosca   \t1,00\t%0.2f\t%0.2f\n", quantidadeRoscas, precoRoscas, descontoRoscas);

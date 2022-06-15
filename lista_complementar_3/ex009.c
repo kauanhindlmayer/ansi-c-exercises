@@ -1,36 +1,29 @@
 /*
-  Faça um programa que calcule e mostre a soma dos números pares entre 100 e 200 
-  (inclusive). O usuário deve ter a opção de repetir quantas vezes quiser esta 
-  operação.
+  Faça  um  programa  que  calcule  e  mostre  a  soma  dos  números  pares  
+  entre  100 e 200 (inclusive). O usuário deve ter a opção de repetir quantas 
+  vezes quiser esta operação.
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void repetir() {
-
-  int somaInteiros = 0, i;
-
-  for (i = 100; i <= 200; i++) {
-    if (i % 2 == 0) {
-      somaInteiros += i;
-    }
-  }
-
-  printf("A soma dos numeros pares entre 100 e 200 equivale a %i\n", somaInteiros);
-}
-
 int main(void){
 
-  int repeat;
+  int somaInteiros = 0, i, repetir;
 
-  repetir();
+  do {
+    for (i = 100; i <= 200; i++) {
+      if (i % 2 == 0) {
+        somaInteiros += i;
+      }
+    }
 
-  printf("Deseja repetir?\n[1] - Sim\n[2] - Nao\n");
-  scanf("%i", &repeat);
-  fflush(stdin);
+    printf("\nA soma dos numeros pares entre 100 e 200 equivale a %i.\n", somaInteiros);
 
-  repeat == 1 ? repetir() : printf("Fim!");
-	
+    printf("Deseja repetir (1 - sim, 2 - nao)? ");
+    scanf("%i", &repetir);
+    fflush(stdin);
+  } while (repetir != 2);
+
 	return 0;
 } 

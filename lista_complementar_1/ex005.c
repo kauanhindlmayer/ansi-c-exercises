@@ -14,7 +14,7 @@ int main(void){
 	scanf("%f", &num1);
 	fflush(stdin);
 	
-	printf("O numero informado com apenas duas casas decimais equivale a %0.2f", num1);
+	printf("\nO numero informado com apenas duas casas decimais equivale a %0.2f", num1);
 	
 	return 0;
 }

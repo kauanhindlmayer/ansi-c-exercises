@@ -1,5 +1,5 @@
 /* 
-	Construa um algoritmo que peça 2 n�meros inteiros e um n�mero real.
+	Construa um algoritmo que peça 2 números inteiros e um número real.
 	Calcule e mostre: 
 		a. o produto do dobro do primeiro com metade do segundo. 
 		b. a soma do triplo do primeiro com o terceiro. 	
@@ -30,7 +30,7 @@ int main(void){
 	b = (num1 * 3) +  num3;
 	c = (num3 * num3 * num3);
 	
-	printf("O produto do dobro do primeiro com a metade do segundo e %i\n", a);
+	printf("\nO produto do dobro do primeiro com a metade do segundo e %i\n", a);
 	printf("A soma do triplo do primeiro com o segundo e %0.2f\n", b);
 	printf("O terceiro elevado ao cubo e %0.2f\n", c);
 	

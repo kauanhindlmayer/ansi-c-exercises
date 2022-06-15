@@ -8,19 +8,19 @@
 
 int main(void){
 
-	int horas, valor, salario;
+	float horas, valor, salario;
 	
 	printf("Quanto voce ganha por hora? ");
-	scanf("%i", &valor);
+	scanf("%f", &valor);
 	fflush(stdin);
 
 	printf("Quantas horas voce trabalha por mes? ");
-	scanf("%i", &horas);
+	scanf("%f", &horas);
 	fflush(stdin);
 	
 	salario = horas * valor;
 	
-	printf("O total do seu salario neste mes e %0.1i", salario);
+	printf("\nO total do seu salario neste mes e %0.2f", salario);
 	
 	return 0;
 }

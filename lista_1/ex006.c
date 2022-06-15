@@ -1,5 +1,5 @@
 /* 
-	Construa um programa que calcule a �rea de um c�rculo. 
+	Construa um programa que calcule a área de um círculo. 
 */
 
 #include <stdio.h>
@@ -15,7 +15,7 @@ int main(void){
 	
 	area = 3.14 * (raio * raio);
 	
-	printf("A area do circulo equivale a %f\n", area);
+	printf("\nA area do circulo equivale a %.2f\n", area);
 	
 	return 0;
 }

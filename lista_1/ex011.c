@@ -8,23 +8,18 @@
 #include <stdlib.h>
 
 int main(void){
-	// Variáveis
-	int dias, valor = 25, salarioBruto, salarioLiquido, imposto;
+
+	float dias, valor = 25, salarioBruto, salarioLiquido, imposto;
 	
-	// Entrada de dados
 	printf("Digite o numero de dias trabalhados: ");
-	scanf("%i", &dias);
+	scanf("%f", &dias);
 	fflush(stdin);
 
-	// Processamentos
 	salarioBruto = dias * valor;
 	imposto = salarioBruto * 0.08;
 	salarioLiquido = salarioBruto - imposto;
 	
+	printf("\nO total do seu salario neste mes e %0.2f", salarioLiquido);
 	
-	//Saída de dados
-	printf("O total do seu salario neste mes e %0.1i", salarioLiquido);
-	
-	// Fim do programa
 	return 0;
 }

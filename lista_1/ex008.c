@@ -19,7 +19,7 @@ int main(void){
 	
 	soma = num1 + num2;
 	
-	printf("A soma entre %0.1f e %0.1f e igual a %0.1f\n", num1, num2, soma);
+	printf("\nA soma entre %0.1f e %0.1f e igual a %0.1f.", num1, num2, soma);
 	
 	return 0;
 }

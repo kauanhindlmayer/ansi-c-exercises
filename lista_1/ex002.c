@@ -9,7 +9,7 @@
 int main(void){
 	printf("--------------------------------------\n");
 	printf("|  Nome: Kauan Hindlmayer            |\n");
-	printf("|  Telefone: 9 8832-7314             |\n");
+	printf("|  Telefone: 0 0000-0000             |\n");
 	printf("|                                    |\n");
 	printf("|                                    |\n");
 	printf("|                                    |\n");

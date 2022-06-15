@@ -13,9 +13,9 @@ int main(void){
 	scanf("%f", &metros);
 	fflush(stdin);
 	
-    centimetros = metros * 100;
+  centimetros = metros * 100;
 	
-	printf("%0.2fm em centimetros equivale a %0.2fcm", metros, centimetros);
+	printf("\n%0.2fm em centimetros equivale a %0.2fcm", metros, centimetros);
 	
 	return 0;
 }

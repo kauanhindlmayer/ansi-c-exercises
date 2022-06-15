@@ -15,7 +15,7 @@ int main(void){
 	
 	centimetros = metros * 100;
 	
-	printf("%0.2f metros equivalem a %0.2f centimetros\n", metros, centimetros);
+	printf("\n%0.2f metros equivalem a %0.2f centimetros.\n", metros, centimetros);
 	
 	return 0;
 }
