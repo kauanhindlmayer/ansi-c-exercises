@@ -15,13 +15,13 @@ int main(void){
 	fflush(stdin);
 	
 	if (turno == 'M' || turno == 'm') {
-		printf("Bom dia!");
+		printf("\nBom dia!");
 	} else if (turno == 'V' || turno == 'v') {
-		printf("Boa tarde!");
+		printf("\nBoa tarde!");
 	} else if (turno == 'N' || turno == 'n') {
-		printf("Boa noite!");
+		printf("\nBoa noite!");
 	} else {
-		printf("Mensagem Invalida!");
+		printf("\nMensagem Invalida!");
 	}
 
 	return 0;

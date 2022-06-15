@@ -13,7 +13,7 @@ int main(void){
 	scanf("%f", &num1);
 	fflush(stdin);
 
-	(num1 > 0) ? printf("O numero %0.1f e positivo!", num1) : printf("O numero %0.1f e negativo!", num1);
+	num1 > 0 ? printf("O numero %0.1f e positivo!", num1) : printf("O numero %0.1f e negativo!", num1);
 
 	return 0;
 }

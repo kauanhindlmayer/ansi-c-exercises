@@ -14,16 +14,16 @@
 void operacoes (void);
 
 int main(void){
-    int novamente;
+	int novamente;
 
-    do {
-        operacoes();
-        printf("\nDeseja fazer mais alguma operacao? \n[1] - Sim\n[2] - Nao\n\n");
-        scanf("%i", &novamente);
-        fflush(stdin);
-    } while(novamente == 1);
-    
-    return 0;
+	do {
+		operacoes();
+		printf("\nDeseja fazer mais alguma operacao? \n[1] - Sim\n[2] - Nao\n\n");
+		scanf("%i", &novamente);
+		fflush(stdin);
+	} while(novamente == 1);
+	
+	return 0;
 }
 
 void operacoes (void) {

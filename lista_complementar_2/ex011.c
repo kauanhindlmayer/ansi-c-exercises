@@ -49,7 +49,7 @@ int main(void){
 		printf("Fim!");
 	}
 
-	printf("O resultado da operação entre %.1f e %.1f equivale a %.1f.", operando1, operando2, resultado);
+	printf("\nO resultado da operação entre %.1f e %.1f equivale a %.1f.", operando1, operando2, resultado);
 
 	return 0;
 }

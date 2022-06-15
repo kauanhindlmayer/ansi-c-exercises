@@ -30,11 +30,11 @@ int main(void){
 	mediaIdade = (aluno1 + aluno2 + aluno3 + aluno4) / 4;
 
 	if (mediaIdade < 25) {
-		printf("Turma Jovem!");
+		printf("\nTurma Jovem!");
 	} else if (mediaIdade > 25 && mediaIdade < 40) {
-		printf("Turma Adulta!");
+		printf("\nTurma Adulta!");
 	} else {
-		printf("Turma Idosa!");
+		printf("\nTurma Idosa!");
 	}
 			
 	return 0;

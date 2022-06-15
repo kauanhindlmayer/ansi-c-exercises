@@ -17,11 +17,13 @@ int main(void){
 	int codigoDeOrigem;
 	char origem[12];
 
-	printf("Digite o preco de custo do produto: \n");
+	printf("Digite o preco de custo do produto: ");
 	scanf("%f", &custo);
+	fflush(stdin);
 	
-	printf("Digite o codigo de origem do produto: \n");
+	printf("Digite o codigo de origem do produto: ");
 	scanf("%i", &codigoDeOrigem);
+	fflush(stdin);
 
 	if (codigoDeOrigem == 1) {
 		strcpy(origem, "Sul");
@@ -39,7 +41,7 @@ int main(void){
 		strcpy(origem, "Importado!");
 	}
 
-	printf("Preco do produto: %.1f\nOrigem do produto: %s\n", custo, origem);
+	printf("\nPreco do produto: %.1f\nOrigem do produto: %s\n", custo, origem);
 
 	return 0;
 }
