@@ -1,6 +1,6 @@
 /*
-  Construa  um  algoritmo  que  leia  um  vetor  de  20  elementos  e  coloque-os 
-  em ordem crescente.
+  Construa  um  algoritmo  que  leia  um  vetor  de  20  elementos  e  
+  coloque-os em ordem crescente.
 */
 
 #include <stdio.h>
@@ -12,8 +12,9 @@ int main(void) {
 
   int vetor[tam], aux, i, j;
 
+  printf("Dados do Vetor A:\n");
   for(i = 0; i < tam; i++) {
-    printf("Entre com o elemento %i: ", i + 1);
+    printf("A[%i]: ", i);
     scanf("%i", &vetor[i]);
     fflush(stdin);
   }
@@ -28,8 +29,7 @@ int main(void) {
     }
   }
 
-  printf("Vetor em ordem crescente:\n");
-
+  printf("\nVetor  A em ordem crescente:\n");
   for(i = 0; i < tam; i++) {
     printf("%i, ", vetor[i]);
   }

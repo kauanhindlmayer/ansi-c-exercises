@@ -10,7 +10,7 @@
 
 int main(void) {
 
-  int vetorA[5], vetorB[10], vetorC[15], vetorD[15], acumulador, i;
+  int vetorA[5], vetorB[10], vetorC[15], vetorD[15], flag, i, j;
 
   printf("Entre com os elementos do vetor A\n");
   for(i = 0; i < 5; i++) {
@@ -29,14 +29,28 @@ int main(void) {
 
     vetorC[5 + i] = vetorB[i];
 
-    for(i = 0; i < 5; i++) {
-      if(vetorB[i] != vetorA[i])
+    for(j = 0; j < 5; j++) {
+      if(vetorA[j] == vetorB[i]) {
+        flag = 1;
+      } else {
+        flag = 0;
+      }
+
+      if(flag == 0) {
+        vetorD[i] = vetorA[i];
+      }
     }
   }
 
   printf("\nVetor C: ");
   for(i = 0; i < 15; i++) {
     printf("%i, ", vetorC[i]);
+  }
+
+
+  printf("\nVetor D: ");
+  for(i = 0; i < 15; i++) {
+    printf("%i, ", vetorD[i]);
   }
 
   return 0;

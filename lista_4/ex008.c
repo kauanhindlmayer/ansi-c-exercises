@@ -13,22 +13,21 @@ int main(void) {
 
   int vetor[tam][tam], k, vetor2[tam], i, j;
 
+  printf("Dados da Matriz A:\n");
   for(i = 0; i < tam; i++) {
     for(j = 0; j < tam; j++) {
-      printf("Entre com o elemento %i: ", i + 1);
+      printf("A[%i][%i]: ", i, j);
       scanf("%i", &vetor[i][j]);
       fflush(stdin);
     }
   }
 
-  printf("Digite a constante K: ");
+  printf("\nDigite a constante K: ");
   scanf("%i", &k);
   fflush(stdin);
 
   for(i = 0; i < tam; i++) {
-    j = 0;
-    vetor[i][j] = vetor[i][j] - k;
-    j++;
+    vetor[i][i] -= k;
   }
 
   for(i = 0; i < tam; i++) {

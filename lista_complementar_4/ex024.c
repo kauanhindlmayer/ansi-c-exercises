@@ -24,7 +24,6 @@ int main(void) {
     }
   }
 
-
   tam = strlen(nome);
 
   for(i = 0; i < tam; i++) {

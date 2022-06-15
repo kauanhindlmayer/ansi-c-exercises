@@ -1,39 +1,41 @@
 /*
-  Construa  um  algoritmo  que  leia  duas  matrizes  3x3  e  gere  uma  terceira  
+  Construa  um  algoritmo  que  leia  duas  matrizes  tamxtam  e  gere  uma  terceira  
   matriz com a soma dos elementos correspondentes de a e b.
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+#define tam       3
+
 int main(void) {
 
-  int vetor1[3][3], vetor2[3][3], vetor3[3][3], i, j;
+  int vetor1[tam][tam], vetor2[tam][tam], vetortam[tam][tam], i, j;
 
 
-  printf("Entre com os elementos do primeiro vetor\n");
-  for(i = 0; i < 3; i++) {
-    for(j = 0; j < 3; j++) {
-      printf("Elemento %i: ", i + 1);
+  printf("Dados da Matriz A:\n");
+  for(i = 0; i < tam; i++) {
+    for(j = 0; j < tam; j++) {
+      printf("A[%i][%i]: ", i, j);
       scanf("%i", &vetor1[i][j]);
       fflush(stdin);
     }
   }
 
-  printf("Entre com os elementos do segundo vetor\n");
-  for(i = 0; i < 3; i++) {
-    for(j = 0; j < 3; j++) {
-      printf("Elemento %i: ", i + 1);
+  printf("\nDados da Matriz B:\n");
+  for(i = 0; i < tam; i++) {
+    for(j = 0; j < tam; j++) {
+      printf("B[%i][%i]: ", i, j);
       scanf("%i", &vetor2[i][j]);
       fflush(stdin);
     }
   }
 
-  for(i = 0; i < 3; i++) {
+  for(i = 0; i < tam; i++) {
     printf("\n");
-    for(j = 0; j < 3; j++) {
-      vetor3[i][j] = vetor1[i][j] + vetor2[i][j];
-      printf("%i\t", vetor3[i][j]);
+    for(j = 0; j < tam; j++) {
+      vetortam[i][j] = vetor1[i][j] + vetor2[i][j];
+      printf("%i\t", vetortam[i][j]);
     }
   }
 

@@ -6,25 +6,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define tam       3
+#define tam       5
 
 int main(void) {
 
   int vetor1[tam][tam], vetor2[tam][tam], vetor3[tam][tam], i, j;
 
-  printf("Entre com os valores do primeiro vetor\n");
+  printf("\nDados da Matriz A:\n");
   for(i = 0; i < tam; i++) {
     for(j = 0; j < tam; j++) {
-      printf("Elemento %i: ", i + 1);
+      printf("A[%i][%i]: ", i, j);
       scanf("%i", &vetor1[i][j]);
       fflush(stdin);
     }
   }
 
-  printf("Entre com os valores do segundo vetor\n");
+  printf("\nDados da Matriz B:\n");
   for(i = 0; i < tam; i++) {
     for(j = 0; j < tam; j++) {
-      printf("Elemento %i: ", i + 1);
+      printf("B[%i][%i]: ", i, j);
       scanf("%i", &vetor2[i][j]);
       fflush(stdin);
     }
