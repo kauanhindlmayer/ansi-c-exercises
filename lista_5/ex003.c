@@ -27,29 +27,61 @@ void funcA(void) {
 
   for(denominador = 1; denominador <= 50; denominador++, numerador += 2) {
     soma += numerador / denominador;
-    printf("\nS = %.1f / %.1f", numerador, denominador);
+    printf("\nS += %.1f / %.1f", numerador, denominador);
   }
 
   printf("\n\nResultado: %.2f", soma);
 }
 
 void funcB(void) {
-  float soma = 0, denominador, numerador = 1;;
+  float soma = 0, denominador = 1, numerador = 1, i;
 
-  for(denominador = 1; denominador <= 5; denominador++, numerador += 2) {
-    soma += (numerador / denominador) - ((numerador + 1) / (denominador + 1));
-    printf("\nS = (%.1f / %.1f) - (%.1f / %.1f)");
+  for(i = 1; i <= 5; i++) {
+    soma += numerador / denominador;
+    printf("\nS += %.1f / %.1f", numerador, denominador);
+    numerador++;
+    denominador++;
+    soma -= numerador / denominador;
+    printf("\nS -= %.1f / %.1f", numerador, denominador);
+    numerador++;
+    denominador++;
   }
 
   printf("\n\nResultado: %.2f", soma);
 }
 
 void funcC(void) {
-  
+  float soma = 0, denominador = 1, numerador = 1000, i;
+
+  for(i = 1; i <= 10; i++) {
+    soma += numerador / denominador;
+    printf("\nS += %.1f / %.1f", numerador, denominador);
+    denominador++;
+    numerador -= 3;
+    soma -= numerador / denominador;
+    printf("\nS -= %.1f / %.1f", numerador, denominador);
+    denominador++;
+    numerador -= 3;
+  }
+
+  printf("\n\nResultado: %.2f", soma);
 }
 
 void funcD(void) {
-  
+  float soma = 0, denominador = 10, numerador = 480, i;
+
+  for(i = 1; i <= 10; i++) {
+    soma += numerador / denominador;
+    printf("\nS += %.1f / %.1f", numerador, denominador);
+    denominador++;
+    numerador -= 5;
+    soma -= numerador / denominador;
+    printf("\nS -= %.1f / %.1f", numerador, denominador);
+    denominador++;
+    numerador -= 5;
+  }
+
+  printf("\n\nResultado: %.2f", soma);
 }
 
 int main(void) {
