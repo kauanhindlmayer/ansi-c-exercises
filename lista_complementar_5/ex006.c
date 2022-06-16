@@ -8,10 +8,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int validaCaractere(char caractere) {
+  int caractereDecimal = (int) caractere;
+
+  if(caractereDecimal > 47 && caractereDecimal < 58) {
+    return 0; 
+  } else {
+    return 1;
+  }
+}
+
 int main(void) {
+  char caractere;
 
-  
+  printf("Digite um caractere: ");
+  scanf("%c", &caractere);
+  fflush(stdin);
 
+  int res = validaCaractere(caractere);
+
+  res == 0 ? printf("\nCaractere decimal") : printf("\nCaractere nao decimal");
 
   return 0;
 }
