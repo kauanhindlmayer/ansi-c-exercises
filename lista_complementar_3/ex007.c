@@ -10,7 +10,7 @@ int main(void){
 
   int num, res, i;
 
-  printf("Digite qual numero deseja ver a tabuada: \n");
+  printf("Digite qual numero deseja ver a tabuada: ");
   scanf("%i", &num);
   fflush(stdin);
 

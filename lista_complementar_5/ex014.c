@@ -1,5 +1,5 @@
 /*
-  14. Faça um programa que leia uma palavra e execute a opção escolhida pelo 
+  Faça um programa que leia uma palavra e execute a opção escolhida pelo 
   usuário conforme o menu que deve ser mostrado na tela:
     a) - Todas as letras em maiúscula;
     b) - Todas as letras em minúscula;

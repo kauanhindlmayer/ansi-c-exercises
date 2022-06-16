@@ -8,18 +8,14 @@
 
 int main(void){ 
 
-  float denominador = 1, soma = 0;
-  int i;
-
-  printf("------------------------------\n");
+  float denominador = 1, soma = 0, numerador;
   
-  for (i = 1; i <= 10; i++) {
-    soma += (i / denominador);
-    printf("%0.1f\n", soma); 
-    denominador += 2;
+  for (numerador = 1; numerador <= 10; numerador++, denominador += 2) {
+    soma += (numerador / denominador);
+    printf("S = %.1f / %.1f\n", numerador, denominador); 
   }
 
-  printf("------------------------------\nA soma equivale a %.1f\n", soma);
+  printf("\nA soma equivale a %.1f", soma);
 
 	return 0;
 } 

@@ -17,12 +17,12 @@ int main(void){
 	
 	int valor, nota100, nota50, nota10, nota5, moeda1, aux;
 
-	printf("Digite o valor do saque: R$\n");
+	printf("Digite o valor do saque: R$ ");
 	scanf("%i", &valor);
 	fflush(stdin);
 
 	if (valor < 9 || valor > 600) {
-		printf("Valor Invalido!\n");
+		printf("\nValor Invalido!");
 		return 0;
 	} 
 
@@ -42,7 +42,7 @@ int main(void){
 
 	moeda1 = valor / 1;
 
-	printf("Para sacar a quantia de %i:\nNotas de R$100: %i\nNotas de R$50: %i\nNotas de R$10: %i\nNotas de R$5: %i\nMoedas de R$1: %i\n", aux, nota100, nota50, nota10, nota5, moeda1);
+	printf("\nPara sacar a quantia de %i:\nNotas de R$100: %i\nNotas de R$50: %i\nNotas de R$10: %i\nNotas de R$5: %i\nMoedas de R$1: %i\n", aux, nota100, nota50, nota10, nota5, moeda1);
 
 	return 0;
 }

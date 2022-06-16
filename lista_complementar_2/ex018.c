@@ -30,9 +30,9 @@ int main(void){
 	valor2 = ((valorDeB * -1) - (pow(delta, 1/2)))/ (2 * valorDeA);
 
 	if (delta > 0) {
-		printf("Delta e positivo!\n");
+		printf("\nDelta e positivo.");
 	} else {
-		printf("Delta e negativo!\n");
+		printf("\nDelta e negativo.");
 	}
 
 	printf("Valor do x': %i\nValor do x'': %i\n\n", valor1, valor2);

@@ -17,19 +17,14 @@ int parImpar(int x) {
 
 int main(void) {
 
-  int x;
+  int x, res;
 
   printf("Digite um numero: ");
   scanf("%i", &x);
   fflush(stdin);
 
-  // if(parImpar(x) == 0) {
-  //   printf("\nO numero %i e PAR.", x);
-  // } else {
-  //   printf("\nO numero %i e IMPAR.", x);
-  // }
-
-  printf("%i", parImpar(x));
+  res = parImpar(x);
+  res == 0 ? printf("\nO numero %i e PAR.", x) : printf("\nO numero %i e IMPAR.", x);
 
   return 0;
 }

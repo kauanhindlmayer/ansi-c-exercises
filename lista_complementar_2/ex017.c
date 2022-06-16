@@ -9,32 +9,30 @@
 #include <stdlib.h>
 
 int main(void){
-	float lado1, lado2, lado3;
+	float a, b, c;
 
-	printf("Digite o primeiro lado do triangulo: \n");
-	scanf("%f", &lado1);
+	printf("Digite o primeiro lado do triangulo: ");
+	scanf("%f", &a);
 	fflush(stdin);
 
-	printf("Digite o primeiro lado do triangulo: \n");
-	scanf("%f", &lado2);
+	printf("Digite o segundo lado do triangulo: ");
+	scanf("%f", &b);
 	fflush(stdin);
 
-	printf("Digite o primeiro lado do triangulo: \n");
-	scanf("%f", &lado3);
+	printf("Digite o terceiro lado do triangulo: ");
+	scanf("%f", &c);
 	fflush(stdin);
 
-	if (lado1 + lado2 > lado3) {
-		printf("Os valores informados podem formar um triangulo!\n");
+	if ((a + b > c) && (a + c > b) && (b + c > a)) {
+		if (a == b == c) {
+			printf("\nO triangulo e equilatero.");
+		} else if (a != b != c) {
+			printf("\nO triangulo e escaleno.");
+		} else {
+			printf("\nO triangulo e isosceles.");
+		}
 	} else {
-		printf("Os valores informador não podem formar um triangulo!\n");
-	}
-
-	if (lado1 == lado2 == lado3) {
-		printf("O triangulo e equilatero!\n");
-	} else if (lado1 != lado2 != lado3) {
-		printf("O triangulo e escaleno!\n");
-	} else {
-		printf("O triangulo e isosceles!\n");
+		printf("\nOs valores informados não podem formar um triangulo.");
 	}
 
 	return 0;

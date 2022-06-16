@@ -10,11 +10,11 @@ int main(void){
 
 	int num1, num2, i;
 
-	printf("Digite um numero:\n");
+	printf("Digite um numero: ");
 	scanf("%i", &num1);
 	fflush(stdin);
 
-	printf("Digite outro numero:\n");
+	printf("Digite outro numero: ");
 	scanf("%i", &num2);
 	fflush(stdin);
 

@@ -11,7 +11,7 @@ int main(void){
 
   int f1 = 0, f2 = 1, i, r;
 
-  printf("Quantos termos voce deseja?\n");
+  printf("Quantos termos voce deseja? ");
   scanf("%i", &i);
   fflush(stdin);
 

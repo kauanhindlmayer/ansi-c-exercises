@@ -11,7 +11,7 @@ int main(void){
 
   int turmas, alunos, media, soma = 0, i;
 
-  printf("Digite a quantidade de turmas: \n");
+  printf("Digite a quantidade de turmas: ");
   scanf("%i", &turmas);
   fflush(stdin);
 
@@ -21,7 +21,7 @@ int main(void){
     fflush(stdin);
 
     if (alunos > 40) {
-      return printf("Quantidade invalida, as turmas não podem ter mais de 40 alunos!\n");
+      return printf("\nQuantidade invalida, as turmas não podem ter mais de 40 alunos!\n");
     }
 
     soma += alunos;
@@ -29,7 +29,7 @@ int main(void){
 
   media = soma / turmas;
 
-  printf("A quantidade media de alunos por turma equivale a %i\n", media);
+  printf("\nA quantidade media de alunos por turma equivale a %i\n", media);
 
   return 0;
 }

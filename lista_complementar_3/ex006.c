@@ -10,12 +10,12 @@ int main(void){
 
   int media, valor, quantidade, soma = 0, i;
 
-  printf("Informe a quantidade de CD's: \n");
+  printf("Informe a quantidade de CD's: ");
   scanf("%i", &quantidade);
   fflush(stdin);
 
   for (i = 1; i <= quantidade; i++) {
-    printf("Informe o valor do CD %i: \n ", i);
+    printf("Informe o valor do CD %i: ", i);
     scanf("%i", &valor);
     fflush(stdin);
 
@@ -24,9 +24,7 @@ int main(void){
 
   media = soma / quantidade;
 
-  printf("------------------------------\n");
-  printf("Valor total investido:\tR$%i\nCusto medio por CD:\tR$%i\n", soma, media);
-  printf("------------------------------\n");
+  printf("\nValor total investido:\tR$%i\nCusto medio por CD:\tR$%i\n", soma, media);
 
   return 0;
 }

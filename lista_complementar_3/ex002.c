@@ -25,7 +25,6 @@ int main(void){
 				printf("%i, ", i);
 			}
 		} 
-
 	} else {
 		printf("\nValores pares que estao no intervalo de %i e %i:\n", num1, num2);
 		for (i = num1 + 1; i < num2; i++) {

@@ -15,11 +15,9 @@ int main(void){
 	int classe, opcaoMamifero, opcaoAve, opcaoReptil, opcaoBipede, opcaoQuadrupede, opcaoNaoVoador;
 
 	printf("Escolha um dos seguintes animais:\nleao, cavalo, homem, macaco, morcego, baleia, avestruz, pinguim, pato, aguia, tartaruga, crocodilo e cobra.\n");
-	printf("------------------------------------------------------------------------------------------------\n");
-	printf("O animal e:\n[1] - Mamiferos\n[2] - Aves\n[3] - Repteis\n");
+	printf("\nO animal e:\n[1] - Mamiferos\n[2] - Aves\n[3] - Repteis\n");
 	scanf("%i", &classe);
 	fflush(stdin);
-	printf("------------------------------------------------------------------------------------------------\n");
 
 	if (classe == 1){
 		printf("O mamifero e:\n[1] - Quadrupede\n[2] - Bipede\n[3] - Voadores\n[4] - Aquaticos\n");

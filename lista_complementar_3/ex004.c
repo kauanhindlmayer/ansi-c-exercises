@@ -10,7 +10,7 @@ int main(void){
 
   int media, nota, quantidade, soma = 0, i;
 
-  printf("Informe a quantidade de notas: \n");
+  printf("Informe a quantidade de notas: ");
   scanf("%i", &quantidade);
   fflush(stdin);
 
@@ -24,7 +24,7 @@ int main(void){
 
   media = soma / quantidade;
 
-  printf("A media bimestral da turma equivale a %i\n", media);
+  printf("\nA media bimestral da turma equivale a %i\n", media);
 
   return 0;
 }

@@ -1,5 +1,5 @@
 /*
-  15. Faça um programa que peca a hora atual (da região) e peça o código de uma 
+  Faça um programa que peca a hora atual (da região) e peça o código de uma 
   determinada localidade e então passe a hora e o código para uma função que 
   retorna a hora naquela localidade. Os códigos seguem abaixo: 
     1 - Rio de Janeiro     => 0 (zero)

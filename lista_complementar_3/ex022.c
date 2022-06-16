@@ -27,11 +27,11 @@ int main(void) {
   float media = total / numero;
 
   if(media <= 25) {
-    printf("[%.1f] Turma jovem!", media);
+    printf("\n[%.1f] Turma jovem!", media);
   } else if (media <= 60) {
-    printf("[%.1f] Turma adulta!", media);
+    printf("\n[%.1f] Turma adulta!", media);
   } else {
-    printf("[%.1f] Turma idosa!", media);
+    printf("\n[%.1f] Turma idosa!", media);
   }
 
   return 0;
