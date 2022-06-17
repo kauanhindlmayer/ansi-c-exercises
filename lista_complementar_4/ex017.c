@@ -10,7 +10,7 @@
 
 int main(void) {
 
-  int vetorA[5], vetorB[10], vetorC[15], vetorD[15], flag, i, j;
+  int vetorA[5], vetorB[10], vetorC[15], i, j, teste, tam = 0;
 
   printf("Entre com os elementos do vetor A\n");
   for(i = 0; i < 5; i++) {
@@ -21,25 +21,13 @@ int main(void) {
     vetorC[i] = vetorA[i];
   }
 
-  printf("Entre com os elementos do vetor B\n");
+  printf("\nEntre com os elementos do vetor B\n");
   for(i = 0; i < 10; i++) {
     printf("Digite o elemento %i: ", i + 1);
     scanf("%i", &vetorB[i]);
     fflush(stdin);
 
     vetorC[5 + i] = vetorB[i];
-
-    for(j = 0; j < 5; j++) {
-      if(vetorA[j] == vetorB[i]) {
-        flag = 1;
-      } else {
-        flag = 0;
-      }
-
-      if(flag == 0) {
-        vetorD[i] = vetorA[i];
-      }
-    }
   }
 
   printf("\nVetor C: ");
@@ -47,9 +35,39 @@ int main(void) {
     printf("%i, ", vetorC[i]);
   }
 
+  for(i = 0; i < 5; i++) {
+    teste = 0;
+
+    for(j = 0; j < 10; j++) {
+      if(vetorA[i] == vetorB[j]) {
+        teste = 1;
+      }
+    }
+
+    if(teste == 0) {
+      tam++;
+    }
+  }
+
+  int vetorD[tam], k = 0;
+
+  for(i = 0; i < 5; i++) {
+    teste = 0;
+
+    for(j = 0; j < 10; j++) {
+      if(vetorA[i] == vetorB[j]) {
+        teste = 1;
+      }
+    }
+
+    if(teste == 0) {
+      vetorD[k] = vetorA[i];
+      k++;
+    }
+  }
 
   printf("\nVetor D: ");
-  for(i = 0; i < 15; i++) {
+  for(i = 0; i < tam; i++) {
     printf("%i, ", vetorD[i]);
   }
 

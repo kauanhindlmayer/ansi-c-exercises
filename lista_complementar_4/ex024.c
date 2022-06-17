@@ -8,28 +8,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void) {
 
-  char nome[50], tam, i;
+  char nome[50], i;
 
-  for(i = 0; i <= 1; i++) {
+  for(i = 0; i < 1; i++) {
     printf("Digite seu nome: ");
     gets(nome);
     fflush(stdin);
+  }
 
-    if(nome != char) {
-      printf("Nome invalido!\n");
-      i--;
+  for(i = 0; i < strlen(nome); i++) {
+    int teste = 0;
+
+    if(nome[i] >= 48 && nome[i] <= 57) {
+      teste = 1;
+    }
+
+    if(teste == 1) {
+      printf("\nNome invalido!");
+      return 0;
     }
   }
 
-  tam = strlen(nome);
-
-  for(i = 0; i < tam; i++) {
-    printf("%c ", nome[i]);
+  printf("\nNome invertido e maiusculo: ");
+  for(i = strlen(nome); i >= 0; i--) {
+    printf("%c", toupper(nome[i]));
   }
-
 
   return 0;
 }
