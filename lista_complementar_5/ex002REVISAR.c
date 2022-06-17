@@ -6,10 +6,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int verificaAno(int ano) {
+  
+}
+
 int main(void) {
 
-  
+  int ano, res;
 
+  printf("Digite um ano: ");
+  scanf("%i", &ano);
+  fflush(stdin);
+
+  res = verificaAno(ano);
+
+  res == 1 ? printf("Ano bissexto") : printf("Ano nao bissexto");
 
   return 0;
 }

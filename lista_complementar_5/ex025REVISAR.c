@@ -7,8 +7,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void recebePrecos(void) {
+  int i, precos[10];
+
+  for(i = 0; i < 10; i++) {
+    printf("Digite o valor do produto %i: R$");
+    scanf("%i", &precos[i]);
+    fflush(stdin);
+  }
+}
+
 int main(void) {
 
+  recebePrecos();
   
 
 
