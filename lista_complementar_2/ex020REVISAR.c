@@ -11,7 +11,7 @@ int main(void){
 
 	int dia, mes, ano, validadorGeral, validadorMes, validadorAno, validadorDia;
 
-	printf("Informe uma data no formato dd/mm/aaaa:\n");
+	printf("Informe uma data no formato dd/mm/aaaa: ");
 	scanf("%i/%i/%i", &dia, &mes, &ano);
 	fflush(stdin);
 

@@ -7,7 +7,12 @@
 #include <stdlib.h>
 
 int verificaAno(int ano) {
-  
+  if(ano % 400 == 0) return 1;
+  if(ano % 4 == 0 && ano % 100 != 0) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 int main(void) {
