@@ -10,10 +10,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void geraFibonacci(int quantidade) {
+  int r, f1 = 0, f2 = 1;
+
+  printf("0, 1, ");
+  while ((quantidade - 2) > 0) {
+    r = f1 + f2;
+    printf("%i, ", r);
+    if(f1 < f2) {
+      f1 = r;
+    } else {
+      f2 = r;
+    }
+    quantidade--;
+  }
+}
+
 int main(void) {
+  int quantidade;
 
-  
+  printf("Digite a quantidade de numeros: ");
+  scanf("%i", &quantidade);
+  fflush(stdin);
 
+  geraFibonacci(quantidade);
 
   return 0;
 }

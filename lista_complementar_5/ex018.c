@@ -24,7 +24,7 @@ void ajustaData(int dia, int mes, int ano) {
     dia += 5;
   }
 
-  printf("Data reajustada: %i/%i/%i", dia, mes, ano);
+  printf("\nData reajustada: %i/%i/%i", dia, mes, ano);
 }
 
 int main(void) {
