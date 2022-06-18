@@ -10,11 +10,29 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(void) {
 
-  
+  int i, j = 0, tam, res;
+  char frase[50], fraseInvertida[50];
 
+  printf("Digite uma frase (max. 50 caracteres): ");
+  gets(frase);
+  fflush(stdin);
+
+  tam = strlen(frase);
+
+  for(i = 0; i < tam; i++) {
+    if(frase[i] != ' ' && frase[i] != '.') {
+      fraseInvertida[j] = frase[i];
+      j++;
+    }
+  }
+
+  res = strcmp(frase, fraseInvertida);
+  
+  res == 0 ? printf("\nPalindromo") : printf("\nNao Palindromo");
 
   return 0;
 }

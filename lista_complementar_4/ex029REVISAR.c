@@ -10,7 +10,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define tam       4
+
 int main(void) {
+
+  int gabarito[tam], i;
+
+  for(i = 0; i < tam; i++) {
+    printf("Digite o gabarito da questao %i: ", i + 1);
+    scanf("%i", &gabarito[i]);
+    fflush(stdin);
+  }
 
   
 
