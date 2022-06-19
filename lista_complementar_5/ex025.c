@@ -11,6 +11,16 @@
 
 int precos[tam];
 
+void imprimePrecos(void) {
+  
+  recebePrecos();
+
+  printf("\nPrecos em ordem crescente: ");
+  for(int i = 0; i < tam; i++) {
+    printf("%i, ", precos[i]);
+  }
+}
+
 void recebePrecos(void) {
   int i;
 
@@ -36,17 +46,6 @@ void ordenaPrecos(void) {
     }
   }
 }
-
-void imprimePrecos(void) {
-  
-  recebePrecos();
-
-  printf("\nPrecos em ordem crescente: ");
-  for(int i = 0; i < tam; i++) {
-    printf("%i, ", precos[i]);
-  }
-}
-
 
 int main(void) {
 

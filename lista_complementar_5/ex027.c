@@ -6,11 +6,17 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "./libs/calculasegundos.h"
 
 int main(void) {
 
-  
+  int valor;
 
+  printf("Digite um valor em segundos: ");
+  scanf("%i", &valor);
+  fflush(stdin);
+
+  calculaSegundos(valor);
 
   return 0;
 }
