@@ -9,10 +9,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int calculaFatorial(int numero) {
+  return numero == 1 ? numero : numero * calculaFatorial(numero - 1);
+}
+
 int main(void) {
 
-  
+  int numero, i, res;
 
+  for(i = 0; i < 1; i++) {
+    printf("\nDigite um numero para calcular o fatorial: ");
+    scanf("%i", &numero);
+    fflush(stdin);
+
+    if(numero <= 0) {
+      printf("\nNumero invalido!");
+      i--;
+    }
+  }
+
+  res = calculaFatorial(numero);
+
+  printf("\n%i! = %i", numero, res);
 
   return 0;
 }

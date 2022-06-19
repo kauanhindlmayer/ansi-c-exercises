@@ -7,17 +7,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define tam       5
+#define tam       10
 
 int precos[tam];
 
-void imprimePrecos(void) {
-  
-  recebePrecos();
+void ordenaPrecos(void) {
+  int i, j, aux;
 
-  printf("\nPrecos em ordem crescente: ");
-  for(int i = 0; i < tam; i++) {
-    printf("%i, ", precos[i]);
+  for(j = 0; j < tam; j++) {
+    for(i = 0; i < tam - 1; i++) {
+      if(precos[i] > precos[i + 1]) {
+        aux = precos[i];
+        precos[i] = precos[i + 1];
+        precos[i + 1] = aux;
+      }
+    }
   }
 }
 
@@ -33,17 +37,14 @@ void recebePrecos(void) {
   ordenaPrecos();
 }
 
-void ordenaPrecos(void) {
-  int i, j, aux;
 
-  for(j = 0; j < tam; j++) {
-    for(i = 0; i < tam - 1; i++) {
-      if(precos[i] > precos[i + 1]) {
-        aux = precos[i];
-        precos[i] = precos[i + 1];
-        precos[i + 1] = aux;
-      }
-    }
+void imprimePrecos(void) {
+  
+  recebePrecos();
+
+  printf("\nPrecos em ordem crescente: ");
+  for(int i = 0; i < tam; i++) {
+    printf("%i, ", precos[i]);
   }
 }
 
