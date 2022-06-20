@@ -1,5 +1,5 @@
 /*
-  29. Foi realizada uma pesquisa onde perguntou-se a cada um dos entrevistados o seguinte:
+  Foi realizada uma pesquisa onde perguntou-se a cada um dos entrevistados o seguinte:
     a. clube de preferência   1 – Flamengo,	2 – Vasco, 3 – Botafogo, 4-Fluminense, 5-Outros
     b. salário mensal
     c. procedência:	1 – Rio de Janeiro,	2 - Outras cidades

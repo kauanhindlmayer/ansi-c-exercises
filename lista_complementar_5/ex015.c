@@ -21,24 +21,86 @@
  
 int converterHorario(int horas, int minutos, int codigo) {
   switch(codigo) {
-    case 1:
-    case 2:
     case 3:
+      if(horas > 21) {
+        horas = (horas + 3) % 24;
+      } else {
+        horas += 3;
+      }
+      break;
     case 4:
+      if(horas > 20) {
+        horas = (horas + 4) % 24;
+      } else {
+        horas += 4;
+      }
+      break; 
     case 5:
+      if(horas > 19) {
+        horas = (horas + 5) % 24;
+      } else {
+        horas += 5;
+      }
+      break;      
     case 6:
+      if(horas > 18) {
+        horas = (horas + 6) % 24;
+      } else {
+        horas += 6;
+      }
+      break; 
     case 7:
+      if(horas <= 3) {
+        horas = (horas + 24) - 3;
+      } else {
+        horas -= 3;
+      }
+      break;
     case 8:
+      if(horas <= 3) {
+        horas = (horas + 24) - 3;
+      } else {
+        horas -= 3;
+      }
+      break;
     case 9:
+      if(horas <= 2) {
+        horas = (horas + 24) - 2;
+      } else {
+        horas -= 2;
+      } 
+      break;
     case 10:
+      if(horas <= 2) {
+        horas = (horas + 24) - 2;
+      } else {
+        horas -= 2;
+      } 
+      break;
     case 11:
+      if(horas <= 1) {
+        horas = (horas + 24) - 1;
+      } else {
+        horas -= 1;
+      } 
+      break;
     case 12:
+      if(horas > 22) {
+        horas = (horas + 1) % 24;
+      } else {
+        horas += 1;
+      }
+      break;
   }
+
+  printf("\nHorario convertido: %i:%i", horas, minutos);
+
+  return 0;
 }
 
 int main(void) {
 
-  int horas, minutos, codigo, i;
+  int horas, minutos, codigo, i, res;
 
   printf("Digite a hora atual (00:00): ");
   scanf("%i:%i", &horas, &minutos);
@@ -51,7 +113,7 @@ int main(void) {
     scanf("%i", &codigo);
     fflush(stdin);
 
-    if(numero < 1 || numero > 12) {
+    if(codigo < 1 || codigo > 12) {
       printf("\nOpcao invalida!");
       i--;
     }
