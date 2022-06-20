@@ -20,7 +20,7 @@ int main (void) {
   int tanque = 0, repetir, i;
 
   do {
-    printf("Informe distancia em quilometros: ");
+    printf("\nInforme distancia em quilometros: ");
     scanf("%f", &distancia); 
     fflush(stdin);
 
@@ -38,9 +38,14 @@ int main (void) {
       gasto = distancia / consumo;
       resto = capacidade - (distancia / consumo);
     } else {
-      
+      while(rendimento < distancia) {
+        capacidade += capacidade;
+        rendimento = consumo * capacidade;
+        tanque++;
+      }
+      gasto = distancia / consumo;
+      resto = capacidade - (distancia / consumo);
     }
- 
 
     printf("\n\nNecessario reabastecer o tanque %i vezes.", tanque);
     printf("\nQuantidade minima de combustivel: %.2f L", gasto);
