@@ -1,5 +1,5 @@
-#ifndef _FORMATAHORARIO_H
-#define _FORMATAHORARIO_H
+#ifndef _CALCULASEGUNDOS_H
+#define _CALCULASEGUNDOS_H
 
 void calculaSegundos(int valor) {
 

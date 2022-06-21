@@ -12,11 +12,49 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "./libs/formatahorario.h"
+#include "./libs/calculasegundos.h"
+
+typedef struct {
+  int id, dia, mes, ano;
+  int horas_inicio, min_inicio, seg_inicio;
+  int horas_termino, min_termino, seg_termino;
+
+} Empregado;
+
+void recebeDados(int quantidade) {
+
+  Empregado empregado[quantidade];
+
+  for(i = 0; i < quantidade; i++) {
+  printf("\nDigite seu ID: ");
+  scanf("%i", &empregado.id);
+  fflush(stdin);
+
+  printf("\nDigite a data (dd/mm/aaaa): ");
+  scanf("%i/%i/%i", &empregado.dia, &empregado.mes, &empregado.ano);
+  fflush(stdin);
+
+  printf("\nDigite o horario de inicio da tarefa (hh:mm:ss): ");
+  scanf("%i:%i:%i", &empregado.horas_inicio, &empregado.min_inicio, &empregado.seg_inicio);
+  fflush(stdin);
+
+  printf("\nDigite o horario de termino da tarefa (hh:mm:ss): ");
+  scanf("%i:%i:%i", &empregado.horas_termino, &empregado.min_termino, &empregado.seg_termino);
+  fflush(stdin);
+  }
+
+}
 
 int main(void) {
 
-  
+  int quantidade, i;
 
+  printf("Digite a quantidade de empregados: ");
+  scanf("%i", &quantidade);
+  fflush(stdin);
+
+  recebeDados(quantidade);
 
   return 0;
 }
