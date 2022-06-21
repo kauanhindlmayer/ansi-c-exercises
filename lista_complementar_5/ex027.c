@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "./libs/calculasegundos.h"
+#include "./libs/formatahorario.h"
 
 int main(void) {
 
@@ -16,7 +16,9 @@ int main(void) {
   scanf("%i", &valor);
   fflush(stdin);
 
-  calculaSegundos(valor);
+  Tempo tempo = formataHorario(valor);
+
+  printf("\nHorario Formatado: %i:%i:%i", tempo.horas, tempo.minutos, tempo.segundos);
 
   return 0;
 }

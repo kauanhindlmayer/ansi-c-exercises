@@ -1,11 +1,19 @@
 #ifndef _FORMATAHORARIO_H
 #define _FORMATAHORARIO_H
 
-int formataHorario(int horas, int minutos, int segundos) {
+typedef struct {
+  int horas, minutos, segundos;
+} Tempo;
 
-  int horarioFormatado = (horas * 3600) + (minutos * 60) + segundos;
-  
-  return horarioFormatado;
+Tempo formataHorario(int valor) {
+
+  Tempo tempo;
+
+  tempo.horas = valor / 3600;
+  tempo.minutos = (valor % 3600) / 60;
+  tempo.segundos = (valor % 3600) % 60;
+
+  return tempo;
 }
 
 #endif

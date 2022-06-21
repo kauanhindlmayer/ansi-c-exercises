@@ -19,8 +19,7 @@ typedef struct {
   int id, dia, mes, ano;
   int horas_inicio, min_inicio, seg_inicio;
   int horas_termino, min_termino, seg_termino;
-  int duracao;
-  Tempo tempo
+  Tempo duracao;
 } Empregado;
 
 void imprimeDados(int quantidade, Empregado empregado[]) {
@@ -28,7 +27,7 @@ void imprimeDados(int quantidade, Empregado empregado[]) {
 
   for(i = 0; i < quantidade; i++) {
     printf("\nCodigo do Empregado: %i", empregado[i].id);
-    printf("\nDuracao da tarefa: %i/%i/%i", empregado[i].tempo.horas, empregado[i].tempo.minutos, empregado[i].tempo.segundos);
+    printf("\nDuracao da tarefa: %i:%i:%i", empregado[i].duracao.horas, empregado[i].duracao.minutos, empregado[i].duracao.segundos);
   }
 }
 
@@ -38,14 +37,12 @@ int processaDados(int quantidade, Empregado empregado[]) {
   for(i = 0; i < quantidade; i++) {
     int diferenca, segundosTermino, segundosInicio;
 
-    segundosTermino = formataHorario(empregado[i].horas_termino, empregado[i].minutos_termino, empregado[i].segundos_termino); 
-    segundosInicio = formataHorario(empregado[i].horas_inicio, empregado[i].minutos_inicio, empregado[i].segundos_inicio);
+    segundosTermino = calculaSegundos(empregado[i].horas_termino, empregado[i].min_termino, empregado[i].seg_termino); 
+    segundosInicio = calculaSegundos(empregado[i].horas_inicio, empregado[i].min_inicio, empregado[i].seg_inicio);
 
     diferenca = segundosTermino - segundosInicio;
 
-
-    Tempo tempo = calculaSegundos(diferenca);
-
+    Tempo tempo = formataHorario(diferenca);
     empregado[i].duracao = tempo;
   }
 
@@ -56,7 +53,7 @@ void recebeDados(int quantidade) {
 
   Empregado empregado[quantidade];
 
-  for(i = 0; i < quantidade; i++) {
+  for(int i = 0; i < quantidade; i++) {
   printf("\nDigite seu ID: ");
   scanf("%i", &empregado[i].id);
   fflush(stdin);
@@ -79,7 +76,7 @@ void recebeDados(int quantidade) {
 
 int main(void) {
 
-  int quantidade, i;
+  int quantidade;
 
   printf("Digite a quantidade de empregados: ");
   scanf("%i", &quantidade);
