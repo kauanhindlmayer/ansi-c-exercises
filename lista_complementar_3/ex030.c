@@ -9,15 +9,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 int main (void) {
 
-  char nome[50];
+  char nome[100];
+  int numeroDaSorte, i, soma = 0;
 
   printf("Digite seu nome completo (sem espacos): ");
   gets(nome);
   fflush(stdin);
 
+  for(i = 0; i < strlen(nome); i++) {
+    soma += toupper(nome[i]) - 26;
+  }
+
+  numeroDaSorte = soma % 9;
+
+  printf("\nNumero da Sorte: %i", numeroDaSorte);
 
   return 0;
 }
