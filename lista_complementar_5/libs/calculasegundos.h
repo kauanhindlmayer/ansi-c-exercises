@@ -1,15 +1,19 @@
 #ifndef _CALCULASEGUNDOS_H
 #define _CALCULASEGUNDOS_H
 
-void calculaSegundos(int valor) {
-
+typedef struct {
   int horas, minutos, segundos;
+} Tempo;
 
-  horas = valor / 3600;
-  minutos = (valor % 3600) / 60;
-  segundos = (valor % 3600) % 60;
+Tempo calculaSegundos(int valor) {
 
-  printf("\nHorario formatado: %i/%i/%i", horas, minutos, segundos);
+  Tempo tempo;
+
+  tempo.horas = valor / 3600;
+  tempo.minutos = (valor % 3600) / 60;
+  tempo.segundos = (valor % 3600) % 60;
+
+  return tempo;
 }
 
 #endif

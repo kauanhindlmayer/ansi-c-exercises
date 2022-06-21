@@ -19,8 +19,38 @@ typedef struct {
   int id, dia, mes, ano;
   int horas_inicio, min_inicio, seg_inicio;
   int horas_termino, min_termino, seg_termino;
-
+  int duracao;
+  Tempo tempo
 } Empregado;
+
+void imprimeDados(int quantidade, Empregado empregado[]) {
+  int i;
+
+  for(i = 0; i < quantidade; i++) {
+    printf("\nCodigo do Empregado: %i", empregado[i].id);
+    printf("\nDuracao da tarefa: %i/%i/%i", empregado[i].tempo.horas, empregado[i].tempo.minutos, empregado[i].tempo.segundos);
+  }
+}
+
+int processaDados(int quantidade, Empregado empregado[]) {
+  int i;
+
+  for(i = 0; i < quantidade; i++) {
+    int diferenca, segundosTermino, segundosInicio;
+
+    segundosTermino = formataHorario(empregado[i].horas_termino, empregado[i].minutos_termino, empregado[i].segundos_termino); 
+    segundosInicio = formataHorario(empregado[i].horas_inicio, empregado[i].minutos_inicio, empregado[i].segundos_inicio);
+
+    diferenca = segundosTermino - segundosInicio;
+
+
+    Tempo tempo = calculaSegundos(diferenca);
+
+    empregado[i].duracao = tempo;
+  }
+
+  imprimeDados(quantidade, empregado);
+}
 
 void recebeDados(int quantidade) {
 
@@ -28,22 +58,23 @@ void recebeDados(int quantidade) {
 
   for(i = 0; i < quantidade; i++) {
   printf("\nDigite seu ID: ");
-  scanf("%i", &empregado.id);
+  scanf("%i", &empregado[i].id);
   fflush(stdin);
 
   printf("\nDigite a data (dd/mm/aaaa): ");
-  scanf("%i/%i/%i", &empregado.dia, &empregado.mes, &empregado.ano);
+  scanf("%i/%i/%i", &empregado[i].dia, &empregado[i].mes, &empregado[i].ano);
   fflush(stdin);
 
   printf("\nDigite o horario de inicio da tarefa (hh:mm:ss): ");
-  scanf("%i:%i:%i", &empregado.horas_inicio, &empregado.min_inicio, &empregado.seg_inicio);
+  scanf("%i:%i:%i", &empregado[i].horas_inicio, &empregado[i].min_inicio, &empregado[i].seg_inicio);
   fflush(stdin);
 
   printf("\nDigite o horario de termino da tarefa (hh:mm:ss): ");
-  scanf("%i:%i:%i", &empregado.horas_termino, &empregado.min_termino, &empregado.seg_termino);
+  scanf("%i:%i:%i", &empregado[i].horas_termino, &empregado[i].min_termino, &empregado[i].seg_termino);
   fflush(stdin);
   }
 
+  processaDados(quantidade, empregado);
 }
 
 int main(void) {
