@@ -8,6 +8,9 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Para biblioteca math.h ser incluida na compilação é necessário o uso da flag 
+// -lm na linha de comando (gcc ex020.c -o ex020 -lm)
+
 int calculaDistancia(int longInicial, int longFinal, int latInicial, int latFinal) {
   return sqrt(sqrt(longFinal - longInicial) + sqrt(latFinal - latInicial));
 }
