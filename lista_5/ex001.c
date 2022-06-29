@@ -23,8 +23,7 @@ int main(void) {
   scanf("%i", &x);
   fflush(stdin);
 
-  res = parImpar(x);
-  res == 0 ? printf("\nO numero %i e PAR.", x) : printf("\nO numero %i e IMPAR.", x);
+  parImpar(x) ? printf("\nO numero %i e IMPAR.", x) : printf("\nO numero %i e PAR.", x);
 
   return 0;
 }

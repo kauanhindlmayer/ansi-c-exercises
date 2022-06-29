@@ -10,7 +10,9 @@ typedef struct {
   float val_unit;
 } Produto;
 
-void incluir(int produtosIndex, Produto produtos[]) {
+int produtosIndex = 0;
+
+void incluir(Produto produtos[]) {
 
   produtos[produtosIndex].id_produtos = produtosIndex + 1; 
 
@@ -29,43 +31,59 @@ void incluir(int produtosIndex, Produto produtos[]) {
   produtosIndex++;
 }
 
-void pesquisar(int produtosIndex, Produto produtos[]) {
+void pesquisar(Produto produtos[]) {
 
   char desc[50];
-  int i;
+  int i, teste = 0;
 
   printf("\nDigite a descricao do produto: ");
   scanf("%s", &desc);
   fflush(stdin);
-
-  for(i = 0; i < produtosIndex; i++) {
-    int teste = strcmp(tolower(desc), tolower(produtos[i].desc_produto));
-    if(teste == 0) printf("\nProduto em estoque.\nQuantidade: %i", produtos[i].qtd_estoque);
+  
+  for(i = 0; i < strlen(desc); i++) {
+    desc[i] = tolower(desc[i]);
   }
+
+  for(i = 0; i < produtosIndex; i++) {    
+    for(int j = 0; j < strlen(produtos[i].desc_produto); j++) {
+      produtos[i].desc_produto[j] = tolower(produtos[i].desc_produto[j]);
+    }
+
+    int teste = strstr(desc, produtos[i].desc_produto);
+
+    if(teste != NULL) {
+      printf("\nProduto em estoque.\nQuantidade: %.1f\n", produtos[i].qtd_estoque);
+    } else {
+      teste = 1;
+    }
+  }
+
+  if(teste == 1) printf("\nProduto nao encontrado.");
 }
 
-void listar(int produtosIndex, Produto produtos[]) {
+void listar(Produto produtos[]) {
   int i;
   float estoque = 0, valorEstoque = 0;
 
-  printf("\nLista de Produtos (descricao/quantidade/preco): ");
+  printf("\nLista de Produtos");
+  printf("\nDescricao:\t\tQuantidade:\t\tPreco:");
   for(i = 0; i < produtosIndex; i++) {
-    printf("\n%s\t%.1f\t%.1f", produtos[i].desc_produto, produtos[i].qtd_estoque, produtos[i].val_unit);
+    printf("\n%s\t\t\t%.1f\t\t\t%.1f", produtos[i].desc_produto, produtos[i].qtd_estoque, produtos[i].val_unit);
   }
 
   for(i = 0; i < produtosIndex; i++) {
     estoque += produtos[i].qtd_estoque;
-    valorEstoque += produtos[i].val_unit;
+    valorEstoque += (produtos[i].val_unit * produtos[i].qtd_estoque);
   }
 
-  printf("\nQuantidade de itens em estoque: %.1f", estoque);
-  printf("\nValor total dos itens em estoque: %1.f", valorEstoque);
+  printf("\n\nQuantidade de itens em estoque: %.1f", estoque);
+  printf("\nValor total dos itens em estoque: R$%1.f\n", valorEstoque);
 }
 
 int main(void) {
 
   Produto produtos[20];
-  int opcao, produtosIndex = 0;
+  int opcao;
 
   do {
     printf("\n[1] - Incluir\n[2] - Pesquisar\n[3] - Listar\n[4] - Finalizar");
@@ -73,8 +91,8 @@ int main(void) {
     scanf("%i", &opcao);
     fflush(stdin);
 
-    opcao == 1 ? incluir(produtosIndex, produtos) : opcao == 2 ? pesquisar(produtosIndex, produtos) : 
-    opcao == 3 ? listar(produtosIndex, produtos) : opcao == 4 ? printf("\nFim!") : printf("\nOpcao invalida!");
+    opcao == 1 ? incluir(produtos) : opcao == 2 ? pesquisar(produtos) : 
+    opcao == 3 ? listar(produtos) : opcao == 4 ? printf("\nFim!") : printf("\nOpcao invalida!");
   } while(opcao != 4);
 
   return 0;

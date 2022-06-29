@@ -12,7 +12,7 @@ void desenhaLinhas(char tipo, int quantidade) {
 
   for(i = 0; i < quantidade; i ++) {
     printf("\n");
-    for(j = 0; j < 20; j++) {
+    for(j = 0; j < 79; j++) {
       printf("%c", tipo);
     }
   }
