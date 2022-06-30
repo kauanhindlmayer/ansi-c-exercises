@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <locale.h>
 
 typedef struct {
   int id_produtos;
@@ -11,6 +12,13 @@ typedef struct {
 } Produto;
 
 int produtosIndex = 0;
+
+void opcaoinvalida(){
+  printf("\nOpção inválida!");
+  printf("\n\nPressione ENTER para voltar ao menu.");
+  getchar();
+  while (getchar() != '\n');
+}
 
 void incluir(Produto produtos[]) {
 
@@ -29,6 +37,10 @@ void incluir(Produto produtos[]) {
   fflush(stdin);
 
   produtosIndex++;
+
+  printf("\n\nPressione ENTER para voltar ao menu.");
+  getchar();
+  while (getchar() != '\n');
 }
 
 void pesquisar(Produto produtos[]) {
@@ -59,6 +71,10 @@ void pesquisar(Produto produtos[]) {
   }
 
   if(teste == 1) printf("\nProduto nao encontrado.");
+
+  printf("\n\nPressione ENTER para voltar ao menu.");
+  getchar();
+  while (getchar() != '\n');
 }
 
 void listar(Produto produtos[]) {
@@ -78,21 +94,36 @@ void listar(Produto produtos[]) {
 
   printf("\n\nQuantidade de itens em estoque: %.1f", estoque);
   printf("\nValor total dos itens em estoque: R$%1.f\n", valorEstoque);
+
+  printf("\n\nPressione ENTER para voltar ao menu.");
+  getchar();
+  while (getchar() != '\n');
 }
 
 int main(void) {
+  setlocale(LC_ALL, "Portuguese");
 
   Produto produtos[20];
   int opcao;
 
   do {
-    printf("\n[1] - Incluir\n[2] - Pesquisar\n[3] - Listar\n[4] - Finalizar");
-    printf("\nDigite a opcao desejada: ");
+    system("clear");
+
+    printf("+-------------------------------------------------------------+\n");
+    printf("|                       SISTEMA DE ESTOQUE                    |\n");
+    printf("+-------------------------------------------------------------+\n");
+    printf("| [1] - Incluir                                               |\n");
+    printf("| [2] - Pesquisar                                             |\n");
+    printf("| [3] - Listar                                                |\n");
+    printf("| [4] - Finalizar                                             |\n");
+    printf("+-------------------------------------------------------------+\n");
+    printf("\nDigite a opção desejada: ");
     scanf("%i", &opcao);
     fflush(stdin);
 
-    opcao == 1 ? incluir(produtos) : opcao == 2 ? pesquisar(produtos) : 
-    opcao == 3 ? listar(produtos) : opcao == 4 ? printf("\nFim!") : printf("\nOpcao invalida!");
+    opcao == 1 ? incluir(produtos) : opcao == 2 ? pesquisar(produtos) :
+    opcao == 3 ? listar(produtos) : opcao == 4 ? printf("\nObrigado por usar o programa!") : opcaoinvalida();
+
   } while(opcao != 4);
 
   return 0;

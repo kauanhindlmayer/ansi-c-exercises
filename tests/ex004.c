@@ -14,9 +14,10 @@ typedef struct {
 int produtosIndex = 0;
 
 void opcaoinvalida(){
-    printf("\nOpção inválida!");
-    printf("\n\nPrecione ENTER para voltar ao menu.");
-    getchar();
+  printf("\nOpção inválida!");
+  printf("\n\nPressione ENTER para voltar ao menu.");
+  getchar();
+  while (getchar() != '\n');
 }
 
 void incluir(Produto produtos[]) {
@@ -29,12 +30,12 @@ void incluir(Produto produtos[]) {
   printf("                         Adicionando Item                        \n\n");
 
   printf("Digite a descriçao do produto: ");
-  gets(seguranca);
+  scanf("%s", &seguranca);
   fflush(stdin);
 
   if(strcmp(seguranca, "") != 0 && strlen(seguranca) <= 50){
 
-  sprintf(produtos[produtosIndex].desc_produto, "%s", seguranca);
+  printf(produtos[produtosIndex].desc_produto, "%s", seguranca);
 
   printf("Digite a quantidade em estoque do produto: ");
   scanf("%f", &produtos[produtosIndex].qtd_estoque);
@@ -54,8 +55,9 @@ void incluir(Produto produtos[]) {
     }
   }
 
-  printf("\n\nPrecione ENTER para voltar ao menu.");
+  printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
+  while (getchar() != '\n');
 }
 
 void pesquisar(Produto produtos[]) {
@@ -85,7 +87,7 @@ void pesquisar(Produto produtos[]) {
 
     if(strstr(produtos[i].desc_produto, desc)) {
 
-      printf("\n+----+---------------+-----------------------+----------------+\n");
+      printf("\n+----+---------------+---------------------+----------------+\n");
       printf("| id | Descrição     | Quantidade em estoque | Valor unitário |\n");
       printf("+----+---------------+-----------------------+----------------+\n");
       printf("| %d  | %-14s| %.1f                   | %.2f           |\n", produtos[i].id_produtos, produtos[i].desc_produto ,produtos[i].qtd_estoque, produtos[i].val_unit);
@@ -99,8 +101,9 @@ void pesquisar(Produto produtos[]) {
     system("clear");
     printf("\nNenhum produto cadastrado!");
   }
-  printf("\n\nPrecione ENTER para voltar ao menu.");
+  printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
+  while (getchar() != '\n');
 }
 
 void listar(Produto produtos[]) {
@@ -109,7 +112,7 @@ void listar(Produto produtos[]) {
 
   system("clear");
 
-  printf("                        Lista de Produtos                       \n");
+  printf("                        Lista de Produtos                      \n");
   printf("+----+---------------+-----------------------+----------------+\n");
   printf("| id | Descrição     | Quantidade em estoque | Valor unitário |\n");
   printf("+----+---------------+-----------------------+----------------+\n");
@@ -118,15 +121,16 @@ void listar(Produto produtos[]) {
     estoque += produtos[i].qtd_estoque;
     valorEstoque += (produtos[i].val_unit * produtos[i].qtd_estoque);
   }
-  printf("+----+---------------+-----------------------+----------------+\n");
+  printf("+----+---------------+-----------------------+----------------+\n\n");
 
-  printf("\n+--------------------------------------------+----------------+\n");
+  printf("+--------------------------------------------+----------------+\n");
   printf("| Quantidade de itens em estoque             | %.1f            |\n", estoque);
   printf("| Valor total dos itens em estoque           | R$%.2f         |\n", valorEstoque);
   printf("+--------------------------------------------+----------------+\n");
 
-  printf("\n\nPrecione ENTER para voltar ao menu.");
+  printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
+  while (getchar() != '\n');
 }
 
 int main(void) {
@@ -141,7 +145,10 @@ int main(void) {
     printf("+-------------------------------------------------------------+\n");
     printf("|                       SISTEMA DE ESTOQUE                    |\n");
     printf("+-------------------------------------------------------------+\n");
-    printf("| [1] - Incluir                                               |\n| [2] - Pesquisar                                             |\n| [3] - Listar                                                |\n| [4] - Finalizar                                             |\n");
+    printf("| [1] - Incluir                                               |\n");
+    printf("| [2] - Pesquisar                                             |\n");
+    printf("| [3] - Listar                                                |\n");
+    printf("| [4] - Finalizar                                             |\n");
     printf("+-------------------------------------------------------------+\n");
     printf("\n\nDigite a opção desejada: ");
     scanf("%i", &opcao);
