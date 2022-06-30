@@ -22,21 +22,38 @@ void opcaoinvalida(){
 
 void incluir(Produto produtos[]) {
 
-  produtos[produtosIndex].id_produtos = produtosIndex + 1; 
+  produtos[produtosIndex].id_produtos = produtosIndex + 1;
+  char seguranca[50];
 
-  printf("\nDigite a descricao do produto: ");
+  system("clear");
+
+  printf("                         Adicionando Item                        \n\n");
+
+  printf("Digite a descriçao do produto: ");
   scanf("%s", &produtos[produtosIndex].desc_produto);
   fflush(stdin);
 
-  printf("\nDigite a quantidade em estoque do produto: ");
+  // if(strcmp(seguranca, "") != 0 && strlen(seguranca) <= 50){
+
+  // printf(produtos[produtosIndex].desc_produto, "%s", seguranca);
+
+  printf("Digite a quantidade em estoque do produto: ");
   scanf("%f", &produtos[produtosIndex].qtd_estoque);
   fflush(stdin);
 
-  printf("\nDigite o preco unitario do produto: R$");
+  printf("Digite o preço unitario do produto: R$");
   scanf("%f", &produtos[produtosIndex].val_unit);
   fflush(stdin);
 
   produtosIndex++;
+
+  // } else {
+  //   if (strcmp(seguranca, "") == 0){
+  //     printf("\nÉ obrigatória a inserção de uma descrição!");
+  //   } else{
+  //     printf("\nA descrição excedeu o limite de 50 caracteres!");
+  //   }
+  // }
 
   printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
@@ -46,32 +63,43 @@ void incluir(Produto produtos[]) {
 void pesquisar(Produto produtos[]) {
 
   char desc[50];
-  int i, teste = 0;
+  int i;
 
-  printf("\nDigite a descricao do produto: ");
+  system("clear");
+
+  printf("                          Pesquisa Item                         \n");
+
+  printf("\nDigite a descrição do produto: ");
   scanf("%s", &desc);
   fflush(stdin);
-  
-  for(i = 0; i < strlen(desc); i++) {
+
+  for(i = 0; i < (int)strlen(desc); i++) {
     desc[i] = tolower(desc[i]);
   }
 
-  for(i = 0; i < produtosIndex; i++) {    
-    for(int j = 0; j < strlen(produtos[i].desc_produto); j++) {
-      produtos[i].desc_produto[j] = tolower(produtos[i].desc_produto[j]);
-    }
+  if(produtosIndex > 0){
+    system("clear");
+    printf("                        Itens Pesquisados                       \n");
+    for(i = 0; i < produtosIndex; i++) {
+      for(int j = 0; j < (int)strlen(produtos[i].desc_produto); j++) {
+        produtos[i].desc_produto[j] = tolower(produtos[i].desc_produto[j]);
+      }
 
-    int teste = strstr(desc, produtos[i].desc_produto);
+      if(strstr(produtos[i].desc_produto, desc)) {
 
-    if(teste != NULL) {
-      printf("\nProduto em estoque.\nQuantidade: %.1f\n", produtos[i].qtd_estoque);
-    } else {
-      teste = 1;
+        printf("\n+----+---------------+-----------------------+------------------+\n");
+        printf("| id | Descrição     | Quantidade em estoque | Valor unitário   |\n");
+        printf("+----+---------------+-----------------------+------------------+\n");
+        printf("| %d  | %-14s| %.1f                   | %.2f           |\n", produtos[i].id_produtos, produtos[i].desc_produto ,produtos[i].qtd_estoque, produtos[i].val_unit);
+        printf("+----+---------------+-----------------------+------------------+\n");
+      } else {
+        printf("\nProduto não encontrado.");
+      }
     }
+  } else {
+    system("clear");
+    printf("\nNenhum produto cadastrado!");
   }
-
-  if(teste == 1) printf("\nProduto nao encontrado.");
-
   printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
   while (getchar() != '\n');
@@ -81,19 +109,23 @@ void listar(Produto produtos[]) {
   int i;
   float estoque = 0, valorEstoque = 0;
 
-  printf("\nLista de Produtos");
-  printf("\nDescricao:\t\tQuantidade:\t\tPreco:");
-  for(i = 0; i < produtosIndex; i++) {
-    printf("\n%s\t\t\t%.1f\t\t\t%.1f", produtos[i].desc_produto, produtos[i].qtd_estoque, produtos[i].val_unit);
-  }
+  system("clear");
 
+  printf("                        Lista de Produtos                      \n");
+  printf("+----+---------------+-----------------------+----------------+\n");
+  printf("| id | Descrição     | Quantidade em estoque | Valor unitário |\n");
+  printf("+----+---------------+-----------------------+----------------+\n");
   for(i = 0; i < produtosIndex; i++) {
+    printf("| %d  | %-14s| %.1f                   | %.2f         |\n", produtos[i].id_produtos, produtos[i].desc_produto ,produtos[i].qtd_estoque, produtos[i].val_unit);
     estoque += produtos[i].qtd_estoque;
     valorEstoque += (produtos[i].val_unit * produtos[i].qtd_estoque);
   }
+  printf("+----+---------------+-----------------------+----------------+\n\n");
 
-  printf("\n\nQuantidade de itens em estoque: %.1f", estoque);
-  printf("\nValor total dos itens em estoque: R$%1.f\n", valorEstoque);
+  printf("+--------------------------------------------+----------------+\n");
+  printf("| Quantidade de itens em estoque             | %.1f            |\n", estoque);
+  printf("| Valor total dos itens em estoque           | R$%.2f      |\n", valorEstoque);
+  printf("+--------------------------------------------+----------------+\n");
 
   printf("\n\nPressione ENTER para voltar ao menu.");
   getchar();
@@ -117,7 +149,7 @@ int main(void) {
     printf("| [3] - Listar                                                |\n");
     printf("| [4] - Finalizar                                             |\n");
     printf("+-------------------------------------------------------------+\n");
-    printf("\nDigite a opção desejada: ");
+    printf("\n\nDigite a opção desejada: ");
     scanf("%i", &opcao);
     fflush(stdin);
 
