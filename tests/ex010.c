@@ -6,36 +6,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define tam       3
+#define tam      3
 
 int main(void) {
 
-  int vetor1[tam][tam], vetor2[tam][tam], vetortam[tam][tam], i, j;
+  int vetorA[tam][tam], vetorB[tam][tam], vetorC[tam][tam], i, j;
 
-
-  printf("Dados da Matriz A:\n");
+  printf("Entre com os valores da Matriz A\n");
   for(i = 0; i < tam; i++) {
     for(j = 0; j < tam; j++) {
-      printf("A[%i][%i]: ", i, j);
-      scanf("%i", &vetor1[i][j]);
+      printf("Digite o valor A[%i][%i]: ", i, j);
+      scanf("%i", &vetorA[i][j]);
       fflush(stdin);
     }
   }
 
-  printf("\nDados da Matriz B:\n");
+  printf("\nEntre com os valores da Matriz B\n");
   for(i = 0; i < tam; i++) {
     for(j = 0; j < tam; j++) {
-      printf("B[%i][%i]: ", i, j);
-      scanf("%i", &vetor2[i][j]);
+      printf("Digite o valor B[%i][%i]: ", i, j);
+      scanf("%i", &vetorB[i][j]);
       fflush(stdin);
+
+      vetorC[i][j] = vetorA[i][j] + vetorB[i][j];
     }
   }
 
+  printf("\nMatriz C");
   for(i = 0; i < tam; i++) {
     printf("\n");
     for(j = 0; j < tam; j++) {
-      vetortam[i][j] = vetor1[i][j] + vetor2[i][j];
-      printf("%i\t", vetortam[i][j]);
+      printf("%i  ", vetorC[i][j]);
     }
   }
 
